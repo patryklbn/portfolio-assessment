@@ -34,11 +34,21 @@ Finally, I downloaded and installed .NET MAUI apps using Visual Studio for Mac i
  #### Github
 Another step in the configuration was to clone the team's shared repository in Visual Studio and verify that the initial projects and configurations were functioning correctly. I opened Visual Studio, navigated to **File > Clone Repository...**, and entered the URL of the shared repository.
 <figure>
-  <img src="images/5.png" alt="Visual Studio installer">
-  <figcaption><b>Fig.3 - Visual Studio for Mac installer - .NET MAUI apps installed</b></figcaption>
+  <img src="images/5.png" alt="Clone Repository">
+  <figcaption><b>Fig.4 - Clone Repository - Entering the URL for the team's shared repository</b></figcaption>
 </figure>
 <br>
 <br>
+After successfully cloning the team's shared repository, I built the project by right-clicking on the solution and selecting 'Build' (Fig. 5). I then ran the project to check if it was working by clicking the play button (Fig. 6).
+<figure>
+  <img src="images/6.png" alt="Clone Repository">
+  <figcaption><b>Fig.4 - Clone Repository - Entering the URL for the team's shared repository</b></figcaption>
+</figure>
+<figure>
+  <img src="images/7.png" alt="Clone Repository">
+  <figcaption><b>Fig.4 - Clone Repository - Entering the URL for the team's shared repository</b></figcaption>
+</figure>
+
 
 
 
