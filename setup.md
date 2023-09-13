@@ -4,7 +4,21 @@ This portfolio entry details the correct set up of my development environment an
 using C# and Visual Studio (VS) to create a new MAUI app as part of group work.
 The configuration began on a macOS system with Visual Studio 2022 and .NET 6 installed.
 
-### Environment configuration
+## Environment configuration
+#### Visual Studio 
 
-The configuration starts from updating Visual Studio to the latest version. Using Visual Studio Update box to check for new updates and selecting **Visual Studio > Check for Updates...** 
+The configuration process begins by updating Visual Studio to the latest version. I used the Visual Studio Update box to check for new updates by navigating to Visual Studio > Check for Updates....
+<figure>
+  <img src="images/1.png" alt="Visual Studio Update box">
+  <figcaption><b>Fig.1 - Visual Studio Update box - Updates to the latest version ready to install</b></figcaption>
+</figure>
+
+Next step of configuration is to install .NET MAUI App template. To build, sign, and deploy .NET MAUI apps for iOS or macOS first I needed the latest version of Xcode. Xcode can be easliy downloaded via App Store by searching "Xcode"
+
+<figure>
+  <img src="images/2.png" alt="App Store">
+  <figcaption><b>Fig.1 - Visual Studio Update box - Updates to the latest version ready to install</b></figcaption>
+</figure>
+
+
 
