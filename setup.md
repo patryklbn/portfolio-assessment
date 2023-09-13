@@ -20,10 +20,16 @@ Next, I configured the .NET MAUI App template. Before building, signing, and dep
   <img src="images/2.png" alt="App Store">
   <figcaption><b>Fig.2 - App Store - Xcode ready for download</b></figcaption>
 </figure>
+
+
+Finally, I downloaded and installed .NET MAUI apps using Visual Studio for Mac installer from Visual Studio website.
+<figure>
+  <img src="images/3.png" alt="App Store">
+  <figcaption><b>Fig.2 - App Store - Xcode ready for download</b></figcaption>
+</figure>
 <br>
 <br>
-Finally, I downloaded and installed .NET MAUI apps via Visual Studio for Mac installer from 
-[Visual Studio website](https://visualstudio.microsoft.com/vs/mac)
+
 
 
 
