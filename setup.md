@@ -56,10 +56,14 @@ The configuration is appropriately set up for our project. However, it does have
 
 ### Difficulties and Resolutions
 During the configuration, I encountered a difficulty. Since GitHub removed support for using passwords to authenticate Git operations this year, I had to generate a Personal Access Token (PAT). I did this by navigating to **Settings > Developer Settings > Personal access tokens** to authenticate during the cloning of a repository (Fig. 7). Once the token was generated, I then removed the website password stored in the macOS keychain and replaced it with the newly generated token (Fig. 8).
+
 <figure>
   <img src="images/8.png" alt="PAT">
   <figcaption><b>Fig.7 - Generating PAT - Generating Personal Access Token</b></figcaption>
 </figure>
+<br>
+<br>
+<br>
 <figure>
   <img src="images/9.png" alt="Keychain">
   <figcaption><b>Fig.8 - Keychain - Replacing old website password with generated token</b></figcaption>
