@@ -9,7 +9,7 @@ The configuration began on a macOS system with Visual Studio 2022 and .NET 6 ins
 
 The configuration process begins by updating Visual Studio to the latest version. I used the Visual Studio Update box to check for new updates by navigating to **Visual Studio > Check for Updates...**
 <figure>
-  <img src="images/1.png" alt="Visual Studio Update box">
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/1.png?raw=true" alt="Visual Studio Update box">
   <figcaption><b>Fig.1 - Visual Studio Update box - Updates to the latest version ready to install</b></figcaption>
 </figure>
 <br>
