@@ -20,15 +20,26 @@ Next, I configured the .NET MAUI App template. Before building, signing, and dep
   <img src="images/2.png" alt="App Store">
   <figcaption><b>Fig.2 - App Store - Xcode ready for download</b></figcaption>
 </figure>
+<br>
+<br>
 
-
-Finally, I downloaded and installed .NET MAUI apps using Visual Studio for Mac installer from Visual Studio website.
+Finally, I downloaded and installed .NET MAUI apps using Visual Studio for Mac installer available on the Visual Studio website.
 <figure>
-  <img src="images/3.png" alt="App Store">
-  <figcaption><b>Fig.2 - App Store - Xcode ready for download</b></figcaption>
+  <img src="images/4.png" alt="Visual Studio installer">
+  <figcaption><b>Fig.3 - Visual Studio for Mac installer - .NET MAUI apps installed</b></figcaption>
 </figure>
 <br>
 <br>
+
+ #### Github
+Another step in the configuration was to clone the team's shared repository in Visual Studio and verify that the initial projects and configurations were functioning correctly. I opened Visual Studio, navigated to **File > Clone Repository...**, and entered the URL of the shared repository.
+<figure>
+  <img src="images/5.png" alt="Visual Studio installer">
+  <figcaption><b>Fig.3 - Visual Studio for Mac installer - .NET MAUI apps installed</b></figcaption>
+</figure>
+<br>
+<br>
+
 
 
 
