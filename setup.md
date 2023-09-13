@@ -51,12 +51,19 @@ After successfully cloning the team's shared repository, I built the project by 
 
 ## Reflection
 
-### Limitations and possible improvments 
-The configuration is appropriately set up for our project. However, it does have some limitations. Working as a team on a multi-platform app using different machines can introduce inconsistencies. Each team member needs to ensure regular updates and proper management of platform-specific SDKs, such as Xcode for iOS/macOS development. To eliminate the risk of inconsistency, using containers—like Docker, for example could be an effective solution.
+### Limitations and possible improvements 
+The configuration is appropriately set up for our project. However, it does have some limitations. Working as a team on a multi-platform app using different machines can introduce inconsistencies. Each team member needs to ensure regular updates and proper management of platform-specific SDKs, such as Xcode for iOS/macOS development. To eliminate the risk of inconsistency, using containers—like Docker, for example, could be an effective solution.
 
 ### Difficulties and Resolutions
-During the configuration, I encountered a difficulty. Since GitHub removed support for using passwords to authenticate Git operations this year, I had to generate a Personal Access Token (PAT) to authenticate when cloning a repository. After generating the token, I removed the website password in the keychain on macOS and replaced it with the generated token.
-
+During the configuration, I encountered a difficulty. Since GitHub removed support for using passwords to authenticate Git operations this year, I had to generate a Personal Access Token (PAT). I did this by navigating to **Settings > Developer Settings > Personal access tokens** to authenticate during the cloning of a repository (Fig. 7). Once the token was generated, I then removed the website password stored in the macOS keychain and replaced it with the newly generated token (Fig. 8).
+<figure>
+  <img src="images/8.png" alt="PAT">
+  <figcaption><b>Fig.8 - Generating PAT - Generating Personal Access Token</b></figcaption>
+</figure>
+<figure>
+  <img src="images/9.png" alt="Keychain">
+  <figcaption><b>Fig.9 - Keychain - Replacing old website password with generated token</b></figcaption>
+</figure>
 
 
 
