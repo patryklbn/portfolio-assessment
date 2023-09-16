@@ -4,13 +4,11 @@ This portfolio entry details the correct setup of my development environment and
 using C# and Visual Studio (VS) to create a new MAUI app as part of group work.
 The configuration began on a macOS system with Visual Studio 2022 and .NET 6 installed.
 
-###### List of contents
-1.  [Visual Studio](#visual-studio)
-2.  [Setting up a project in GitHub with an integrated task board](#setting-up-a-project-in-gitHub-with-an-integrated-task-board)
-3.  [Configuring a personal copy of Visual Studio appropriately](#configuring-a-personal-copy-of-visual-studio-appropriately)
-4.  [Cloning the shared repository](#cloning-the-shared-repository)
-5.  [Documentation](#documentation)
-6.  [Reflection](#reflection
+###### Contents
+*  [Visual Studio](#visual-studio)
+*  [Visual Studio and GitHub](#visual-studio-and-github)
+*  [Kanban Board Setup with GitHub Integration](#kanban-board-setup-with-github-integration)
+*  [Reflection](#reflection)
 
 ## Environment configuration
 ### Visual Studio 
@@ -39,7 +37,7 @@ Finally, I downloaded and installed .NET MAUI apps using Visual Studio for Mac i
 <br>
 <br>
 
- ### Visual Studio and Github
+ ### Visual Studio and GitHub
  
 Another step in the configuration was to clone the team's shared repository in Visual Studio and verify that the initial projects and configurations were functioning correctly. I opened Visual Studio, navigated to **File > Clone Repository...**, and entered the URL of the shared repository.
 <figure>
