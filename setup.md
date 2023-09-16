@@ -55,7 +55,7 @@ After successfully cloning the team's shared repository, I built the project by 
 
 I volunteered to set up a Kanban Board with GitHub integration for my group project. I chose zube.io because it offers good integration with GitHub and reflects changes in real time on GitHub issues. Since we're working as a Scrum team, zube.io sprint management tools come in handy.
 
-First, I went to zube.io and logged in with my GitHub account. Then, in the upper right corner, I clicked Create a new organization. Next, I entered our organization name and chose Link a GitHub Organization. Our group repository appeared since my account was already connected to my GitHub account (Fig.7). On the next page I entered our Project name  and **Create Project**(Fig.8)
+First, I went to zube.io and logged in with my GitHub account. Then, in the upper right corner, I clicked Create a new organization. Next, I entered our organization name and chose Link a GitHub Organization. Our group repository appeared since my account was already connected to my GitHub account (Fig.7). On the next page I entered our Project name  and **Create Project**(Fig.8) 
 
 <figure>
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/6.png?raw=true" alt="Cloned Repository">
