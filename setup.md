@@ -65,7 +65,8 @@ First, I went to zube.io and logged in with my GitHub account. Then, in the uppe
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/11.png?raw=true" alt="Create Project">
   <figcaption><b>Fig.8 - Zube.io - Creating a new project</b></figcaption>
 </figure>
-
+<br>
+<br>
 After creating a new organization and project, I created a test card and checked our group's GitHub repository to see if it appeared as an issue (Fig.9). Once I confirmed the successful integration of the zube.io kanban board with GitHub, I navigated to organization members on zube.io and invited all GitHub Collaborators via email (Fig.10).
 
 <figure>
