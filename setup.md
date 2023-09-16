@@ -100,7 +100,7 @@ While **Jira** is a popular and robust project management tool widely used in th
 ### Limitations and possible improvements 
 The configuration is appropriately set up for our project. However, it does have some limitations. Working as a team on a multi-platform app using different machines can introduce inconsistencies. Each team member needs to ensure regular updates and proper management of platform-specific SDKs, such as Xcode for iOS/macOS development. To eliminate the risk of inconsistency, using containers—like Docker, for example, could be an effective solution.
 
-### Difficulties and Resolutions
+### Difficulties and resolutions
 During the configuration, I encountered a difficulty. Since GitHub removed support for using passwords to authenticate Git operations this year, I had to generate a Personal Access Token (PAT). I did this by navigating to **Settings > Developer Settings > Personal access tokens** to authenticate during the cloning of a repository (Fig. 11). Once the token was generated, I removed the website password stored in the macOS keychain and replaced it with the newly generated token (Fig. 12).
 
 <figure>
