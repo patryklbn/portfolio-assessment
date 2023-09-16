@@ -20,7 +20,7 @@ The configuration process begins by updating Visual Studio to the latest version
 </figure>
 <br>
 <br>
-Next, I configured the .NET MAUI App template. Before building, signing, and deploying .NET MAUI apps for iOS or macOS, I first needed the latest version of Xcode. Xcode is easily available on the App Store; simply search for "Xcode".
+For my personal setup, even though our project might primarily target the Android platform, I wanted to be prepared for potential cross-platform development. I installed the latest version of Xcode, which is essential for building, signing, and deploying .NET MAUI apps for iOS or macOS. Xcode can be found easily on the App Store by searching for 'Xcode'
 
 <figure>
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/2.png?raw=true" alt="App Store">
