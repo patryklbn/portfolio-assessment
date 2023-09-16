@@ -4,6 +4,14 @@ This portfolio entry details the correct setup of my development environment and
 using C# and Visual Studio (VS) to create a new MAUI app as part of group work.
 The configuration began on a macOS system with Visual Studio 2022 and .NET 6 installed.
 
+###### List of contents
+1.  [Visual Studio](#visual-studio)
+2.  [Setting up a project in GitHub with an integrated task board](#setting-up-a-project-in-gitHub-with-an-integrated-task-board)
+3.  [Configuring a personal copy of Visual Studio appropriately](#configuring-a-personal-copy-of-visual-studio-appropriately)
+4.  [Cloning the shared repository](#cloning-the-shared-repository)
+5.  [Documentation](#documentation)
+6.  [Reflection](#reflection)
+
 ## Environment configuration
 ### Visual Studio 
 
@@ -95,18 +103,18 @@ While **Jira** is a popular and robust project management tool widely used in th
 The configuration is appropriately set up for our project. However, it does have some limitations. Working as a team on a multi-platform app using different machines can introduce inconsistencies. Each team member needs to ensure regular updates and proper management of platform-specific SDKs, such as Xcode for iOS/macOS development. To eliminate the risk of inconsistency, using containers—like Docker, for example, could be an effective solution.
 
 ### Difficulties and Resolutions
-During the configuration, I encountered a difficulty. Since GitHub removed support for using passwords to authenticate Git operations this year, I had to generate a Personal Access Token (PAT). I did this by navigating to **Settings > Developer Settings > Personal access tokens** to authenticate during the cloning of a repository (Fig. 7). Once the token was generated, I then removed the website password stored in the macOS keychain and replaced it with the newly generated token (Fig. 8).
+During the configuration, I encountered a difficulty. Since GitHub removed support for using passwords to authenticate Git operations this year, I had to generate a Personal Access Token (PAT). I did this by navigating to **Settings > Developer Settings > Personal access tokens** to authenticate during the cloning of a repository (Fig. 11). Once the token was generated, I removed the website password stored in the macOS keychain and replaced it with the newly generated token (Fig. 12).
 
 <figure>
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/8.png?raw=true" alt="PAT">
-  <figcaption><b>Fig.7 - Generating PAT - Generating Personal Access Token</b></figcaption>
+  <figcaption><b>Fig.11 - Generating PAT - Generating Personal Access Token</b></figcaption>
 </figure>
 <br>
 <br>
 <br>
 <figure>
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/9.png?raw=true" alt="Keychain">
-  <figcaption><b>Fig.8 - Keychain - Replacing old website password with generated token</b></figcaption>
+  <figcaption><b>Fig.12 - Keychain - Replacing old website password with generated token</b></figcaption>
 </figure>
 
 
