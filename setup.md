@@ -61,8 +61,9 @@ First, I went to zube.io and logged in with my GitHub account. Then, in the uppe
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/12.png?raw=true" alt="Create a new organization">
   <figcaption><b>Fig.7 - Zube.io - Creating a new organization</b></figcaption>
 </figure>
-<br>
-<br>
+
+
+
 <figure>
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/11.png?raw=true" alt="Create Project">
   <figcaption><b>Fig.8 - Zube.io - Creating a new project</b></figcaption>
@@ -75,6 +76,7 @@ After creating a new organization and project, I created a test card and checked
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/13.png?raw=true" alt="GitHub group repository issues">
   <figcaption><b>Fig.9 - GitHub - Verifying the appearance of issues on the group repository</b></figcaption>
 </figure>
+
 
 
 <figure>
