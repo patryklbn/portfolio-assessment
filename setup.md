@@ -1,6 +1,6 @@
 ## SETUP
 
-This portfolio entry details the correct set up of my development environment and potential alternative configuration settings 
+This portfolio entry details the correct setup of my development environment and potential alternative configuration settings 
 using C# and Visual Studio (VS) to create a new MAUI app as part of group work.
 The configuration began on a macOS system with Visual Studio 2022 and .NET 6 installed.
 
@@ -55,7 +55,7 @@ After successfully cloning the team's shared repository, I built the project by 
 
 I volunteered to set up a Kanban Board with GitHub integration for my group project. I chose zube.io because it offers good integration with GitHub and reflects changes in real time on GitHub issues. Since we're working as a Scrum team, zube.io sprint management tools come in handy.
 
-First, I went to zube.io and logged in with my GitHub account. Then, in the upper right corner, I clicked Create a new organization. Next, I entered our organization name and chose Link a GitHub Organization. Our group repository appeared since my account was already connected to my GitHub account (Fig.7). On the next page I entered our Project name  and **Create Project**(Fig.8) 
+First, I went to zube.io and logged in with my GitHub account. Then, in the upper right corner, I clicked **Create a new organization**. Next, I entered our organization name and chose **Link a GitHub Organization**. Our group repository appeared since my account was already connected to my GitHub account (Fig.7). On the next page I entered our Project name  and **Create Project**(Fig.8) 
 
 <figure>
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/12.png?raw=true" alt="Create a new organization">
@@ -66,7 +66,21 @@ First, I went to zube.io and logged in with my GitHub account. Then, in the uppe
   <figcaption><b>Fig.8 - Zube.io - Creating a new project</b></figcaption>
 </figure>
 
-After creating a new organization and project, I created a test card and checked our group's GitHub repository to see if it appeared as an issue (Fig.10). Once I confirmed the successful integration of the zube.io kanban board with GitHub, I navigated to organization members on zube.io and invited all GitHub Collaborators via email (Fig.11).
+After creating a new organization and project, I created a test card and checked our group's GitHub repository to see if it appeared as an issue (Fig.9). Once I confirmed the successful integration of the zube.io kanban board with GitHub, I navigated to organization members on zube.io and invited all GitHub Collaborators via email (Fig.10).
+
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/13.png?raw=true" alt="GitHub group repository issues">
+  <figcaption><b>Fig.9 - GitHub - Verifying the appearance of issues on the group repository</b></figcaption>
+</figure>
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/14.png?raw=true" alt="Inviting members on zube.io">
+  <figcaption><b>Fig.10 - Zube.io - Inviting other team members to the project</b></figcaption>
+</figure>
+<br>
+<br>
+
+#### Alternative to Zube.io
+While Jira is a popular and robust project management tool widely used in the industry, its extensive features can be overwhelming for short-term projects and other team members without experience with the scrum framework. Zube.io, with its GitHub integration and simpler UI, offered our team a more immediate and seamless start.
 
 ## Reflection
 
