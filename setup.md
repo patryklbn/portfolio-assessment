@@ -21,8 +21,7 @@ The configuration process begins by updating Visual Studio to the latest version
 <br>
 <br>
 For my personal setup, even though our project might primarily target the Android platform, I wanted to be prepared for potential cross-platform development. I installed the latest version of Xcode, which is essential for building, signing, and deploying .NET MAUI apps for iOS or macOS. Xcode can be found easily on the App Store by searching for 'Xcode'
-
-
+<br>
 <figure>
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/2.png?raw=true" alt="App Store">
   <figcaption><b>Fig.2 - App Store - Xcode in App Store</b></figcaption>
