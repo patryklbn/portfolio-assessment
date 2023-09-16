@@ -75,8 +75,8 @@ After creating a new organization and project, I created a test card and checked
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/13.png?raw=true" alt="GitHub group repository issues">
   <figcaption><b>Fig.9 - GitHub - Verifying the appearance of issues on the group repository</b></figcaption>
 </figure>
-<br>
-<br>
+
+
 <figure>
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/14.png?raw=true" alt="Inviting members on zube.io">
   <figcaption><b>Fig.10 - Zube.io - Inviting other team members to the project</b></figcaption>
@@ -85,7 +85,7 @@ After creating a new organization and project, I created a test card and checked
 <br>
 
 #### Alternative to Zube.io
-While Jira is a popular and robust project management tool widely used in the industry, its extensive features can be overwhelming for short-term projects and other team members without experience with the scrum framework. Zube.io, with its GitHub integration and simpler UI, offered our team a more immediate and seamless start.
+While **Jira** is a popular and robust project management tool widely used in the industry, its extensive features can be overwhelming for short-term projects and other team members without experience with the scrum framework. Zube.io, with its GitHub integration and simpler UI, offered our team a more immediate and seamless start.
  
 ## Reflection
 
