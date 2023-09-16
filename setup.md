@@ -81,7 +81,7 @@ After creating a new organization and project, I created a test card and checked
 
 #### Alternative to Zube.io
 While Jira is a popular and robust project management tool widely used in the industry, its extensive features can be overwhelming for short-term projects and other team members without experience with the scrum framework. Zube.io, with its GitHub integration and simpler UI, offered our team a more immediate and seamless start.
-
+ 
 ## Reflection
 
 ### Limitations and possible improvements 
