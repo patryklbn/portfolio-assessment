@@ -5,10 +5,11 @@ using C# and Visual Studio (VS) to create a new MAUI app as part of group work.
 The configuration began on a macOS system with Visual Studio 2022 and .NET 6 installed.
 
 ###### Contents
-*  [Visual Studio](#https://github.com/patryklbn/portfolio-assessment/blob/master/setup.md#visual-studio)
-*  [Visual Studio and GitHub](#visual-studio-and-github)
-*  [Kanban Board Setup with GitHub Integration](#kanban-board-setup-with-github-integration)
-*  [Reflection](#reflection)
+*  [Visual Studio](https://github.com/patryklbn/portfolio-assessment/blob/master/setup.md#visual-studio)
+*  [Visual Studio and GitHub](https://github.com/patryklbn/portfolio-assessment/blob/master/setup.md#visual-studio-and-github)
+*  [Kanban Board Setup with GitHub Integration](https://github.com/patryklbn/portfolio-assessment/blob/master/setup.md#kanban-board-setup-with-github-integration)
+*  [Reflection](https://github.com/patryklbn/portfolio-assessment/blob/master/setup.md#reflection)
+
 
 ## Environment configuration
 ### Visual Studio 
