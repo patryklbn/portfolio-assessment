@@ -10,7 +10,7 @@ The configuration began on a macOS system with Visual Studio 2022 and .NET 6 ins
 3.  [Configuring a personal copy of Visual Studio appropriately](#configuring-a-personal-copy-of-visual-studio-appropriately)
 4.  [Cloning the shared repository](#cloning-the-shared-repository)
 5.  [Documentation](#documentation)
-6.  [Reflection](#reflection)
+6.  [Reflection](#reflection
 
 ## Environment configuration
 ### Visual Studio 
