@@ -33,13 +33,20 @@ I began my development process by creating a new feature branch in our group rep
 
 ```git checkout -b <feature/continents-patryk-gronczewski-ID-5>```
 
-Next, I dove into the core of my task. I initiated my work within Visual Studio, using the Solution Explorer to create a separate library specifically for the local database with its associated CRUD functionality. My decision to do this was informed by the need to segregate the database from the multi-platform MAUI application. This precaution minimizes potential framework conflicts and enhances overall stability. Here are the steps I took:
+Next, I dove into the core of my task. I initiated my work within Visual Studio, using Solution Explorer to create a separate library specifically for the local database with its associated CRUD functionality. My decision to do this was informed by the need to segregate the database from the multi-platform MAUI application. This precaution minimizes potential framework conflicts and enhances overall stability. Here are the steps I took:
 
 > 1. Right-clicked on the solution.
-> 2. Selected *Add* > *New Project...* > *Class library*.
+> 2. Selected Add > New Project... > Class library.
 > 3. After setting up the library, I proceeded to add the SQLite packages. I did this using the NuGet manager:
-> 4. *Right-clicked on *Dependencies* within the newly created project.
-> 5. *Chose *Manage NuGet Packages*.
-> 6. *Installed the necessary SQLite packages, as illustrated in Fig.2.
+>> 4. Right-clicked on Dependencies within the newly created project.
+>> 5. Choose Manage NuGet Packages.
+>> 6. Installed the necessary SQLite packages, as illustrated in Fig.2.
+
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/16.png?raw=true" alt="NuGet manager">
+  <figcaption><b>Fig.2 - NuGet manager - Adding neccessery SQLite packages/b></figcaption>
+</figure>
+
+
 
 
