@@ -16,7 +16,7 @@ The specific issue tackled involved creating a local database using SQLite, impl
 
 ### Accepting the task
 
-In deciding on our workflow, our team opted to manage our tasks using a Kanban board on zube.io, which is seamlessly integrated with our group's GitHub repository. One of our team members took the initiative to import the provided issues into our Kanban board as a backlog. We collectively decided that team members could independently choose issues from the backlog. Upon selecting an issue, I opened the card, assigned myself to it, and shifted the card's status on the board to In Progress. Subsequently, I verified that I was also assigned to this [issue on GitHub](https://github.com/timh1975/UNDAC-App-Project/issues/5 "Issue 5"). 
+In deciding on our workflow, our team opted to manage our tasks using a Kanban board on zube.io, which is seamlessly integrated with our group's GitHub repository. One of our team members took the initiative to import the provided issues into our Kanban board as a backlog. We collectively decided that team members could independently choose issues from the backlog. Upon selecting an issue, I opened the card, assigned myself to it, and shifted the card's status on the board to In Progress (Fig.1). Subsequently, I verified that I was also assigned to this [issue on GitHub](https://github.com/timh1975/UNDAC-App-Project/issues/5 "Issue 5"). 
 
 <figure>
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/15.png?raw=true" alt="Kanban board">
@@ -33,5 +33,13 @@ I began my development process by creating a new feature branch in our group rep
 
 ```git checkout -b <feature/continents-patryk-gronczewski-ID-5>```
 
+Next, I dove into the core of my task. I initiated my work within Visual Studio, using the Solution Explorer to create a separate library specifically for the local database with its associated CRUD functionality. My decision to do this was informed by the need to segregate the database from the multi-platform MAUI application. This precaution minimizes potential framework conflicts and enhances overall stability. Here are the steps I took:
+
+> Right-clicked on the solution.
+> Selected *Add* > *New Project...* > *Class library*.
+> After setting up the library, I proceeded to add the SQLite packages. I did this using the NuGet manager:
+> *Right-clicked on *Dependencies* within the newly created project.
+> *Chose *Manage NuGet Packages*.
+> *Installed the necessary SQLite packages, as illustrated in Fig.2.
 
 
