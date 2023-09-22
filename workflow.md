@@ -27,9 +27,9 @@ In deciding on our workflow, our team opted to manage our tasks using a Kanban b
 
 I began my development process by creating a new feature branch in our group repository. This approach ensures the separation of my work from the master branch, minimizing the potential for conflicts with my teammates' contributions. As a team, we agreed upon a naming convention: feature/feature_name-name-surname-ID-taskID. To establish the new branch, I executed the following steps:
 
-* Opened the terminal.
-* Navigated to the directory containing my cloned shared repository.
-* Created and immediately checked into the new feature branch using the command:
+> 1. Opened the terminal.
+> 2. Navigated to the directory containing my cloned shared repository.
+> 3. Created and immediately checked into the new feature branch using the command:
 
 ```git checkout -b <feature/continents-patryk-gronczewski-ID-5>```
 
