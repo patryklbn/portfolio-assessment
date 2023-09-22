@@ -22,3 +22,4 @@ In deciding on our workflow, our team opted to manage our tasks using a Kanban b
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/15.png?raw=true" alt="Kanban board">
   <figcaption><b>Fig.1 - zube.io - Assigned task card and kanban board</b></figcaption>
 </figure>
+
