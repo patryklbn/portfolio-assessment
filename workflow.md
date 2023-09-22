@@ -31,7 +31,7 @@ I began my development process by creating a new feature branch in our group rep
 * Navigated to the directory containing my cloned shared repository.
 * Created and immediately checked into the new feature branch using the command:
   
-`git checkout -b <feature/continents-patryk-gronczewski-ID-5>`
+```git checkout -b <feature/continents-patryk-gronczewski-ID-5>```
 
 
 
