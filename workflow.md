@@ -14,3 +14,8 @@ The specific issue tackled involved creating a local database using SQLite, impl
 
 ## Task workflow
 
+### Accepting the task
+
+In deciding on our workflow, our team opted to manage our tasks using a Kanban board on zube.io, which is seamlessly integrated with our group's GitHub repository. One of our team members took the initiative to import the provided issues into our Kanban board as a backlog. We collectively decided that team members could independently choose issues from the backlog. Upon selecting an issue, I opened the card, assigned myself to it, and shifted the card's status on the board to In Progress. Subsequently, I verified that I was also assigned to this issue on GitHub. 
+
+
