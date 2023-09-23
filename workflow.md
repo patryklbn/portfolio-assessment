@@ -193,9 +193,38 @@ Subsequently, I create methods to rigorously test the CRUD operations: Create, R
   <figcaption><b>Fig.7 - Unit Tests - Successfully passed unit tests.<b></figcaption>
 </figure>
 
+### Finalizing the Development Process
 
+#### Definition of Done (DoD)
 
+Upon completion of my task, I checked my work against the **Definition of Done (DoD)** before committing changes. My DoD consists of the following:
 
+* All acceptance criteria are met
+* Functional tests passed
+* No known defects
+  
+After ensuring that my work aligns with the defined criteria, I was ready to commit my changes.
+
+#### Committing changes
+
+Committing changes is an essential part of version control. It means saving our work to the local repository. It's good to commit often, like after finishing a feature or fixing a bug. This way, we capture small changes and make things clear for anyone reviewing.
+
+After I finished my feature, I broke it down into three separate commits. Each one has a clear message that says what I did. This keeps things organized.
+
+To commit, I used the terminal. I went to my project's folder and typed in:
+
+```
+git add path/tofile
+git commit -m "brief description"
+```
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/20.png?raw=true" alt="Unit Tests">
+  <figcaption><b>Fig. - GitHub - Commit messages<b></figcaption>
+</figure>
+
+#### Pull request 
+
+After committing my changes, I initiated a pull request on our group's GitHub repository. I included comments detailing my accomplishments and the modifications I made. After ensuring everything aligned with our group's workflow, I merged my feature branch into the development branch. Although I chose to keep the feature branch for potential future reference, it's worth noting that, according to common GitHub workflows, feature branches are typically deleted after being merged into the main or development branch.
 
 
 
