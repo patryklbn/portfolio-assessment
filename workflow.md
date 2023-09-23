@@ -197,7 +197,7 @@ Subsequently, I create methods to rigorously test the CRUD operations: Create, R
 
 #### Definition of Done (DoD)
 
-Upon completion of my task, I checked my work against the **Definition of Done (DoD)** before committing changes. My DoD consists of the following:
+Upon completion of my task, I checked my work against the Definition of Done (DoD) before committing changes. My DoD consists of the following:
 
 * All acceptance criteria are met
 * Functional tests passed
