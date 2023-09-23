@@ -25,6 +25,7 @@ In deciding on our workflow, our team opted to manage our tasks using a Kanban b
 
 ### Development
 
+#### Creating a branch
 I began my development process by creating a new feature branch in our group repository. This approach ensures the separation of my work from the master branch, minimizing the potential for conflicts with my teammates' contributions. As a team, we agreed upon a naming convention: feature/feature_name-name-surname-ID-taskID. To establish the new branch, I executed the following steps:
 
 > 1. Opened the terminal.
@@ -44,8 +45,42 @@ Next, I dove into the core of my task. I initiated my work within Visual Studio,
 
 <figure>
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/16.png?raw=true" alt="NuGet manager">
-  <figcaption><b>Fig.2 - NuGet manager - Adding neccessery SQLite packages/b></figcaption>
+  <figcaption><b>Fig.2 - NuGet manager - Adding neccessary SQLite packages</b></figcaption>
 </figure>
+
+#### Data Access Class
+
+I started by linking the main application, **UNDAC**, to my library. This allows both to work under the same namespace. Here’s how I achieved this:
+
+> 1. Right-clicked on Dependencies under the main project.
+> 2. Navigated to > Add Project References...
+> 3. Selected my library and confirmed the selection. (Fig. 3).
+
+Following this, I created the `Continent.cs` data access class. It serves as the backbone for my database, holding the essential data. As specified in the issue, I defined the table name as "continents" and set up a getter and setter for the single column as a **Primary Key** in my database- "name". (Fig.4)
+
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/17.png?raw=true" alt="References and class">
+  <figcaption><b>Fig.3 and Fig.4 - Project references and Continent class - Adding project references and creating Continent class</b></figcaption>
+</figure>
+
+#### Configuring App Constants
+
+I followed a [Microsoft tutorial](https://learn.microsoft.com/en-us/dotnet/maui/data-cloud/database-sqlite "Microsoft tutorial"). to lay the foundation for my database configuration.
+
+First, I established the database name and path.
+Subsequently, I defined the SQLite flags: `ReadWrite`, `Create`, and `SharedCache`.
+I then wrote a method to initiate the database connection, setting its full path. For improved log handling, I integrated some console outputs to monitor the process. (Fig.5)
+
+#### Implementing CRUD Functionality
+
+With the core setup in place, I integrated **CRUD** operations into the `ContinentDatabase` class. I wrote methods for essential data manipulations: **Create**, **Read**, **Update**, and **Delete**. Additionally, to enhance database utility, I incorporated a method that fetches a continent by its name using **Linq**.(Fig.6)
+
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/18.png?raw=true" alt="App Constants and CRUD configurations">
+  <figcaption><b>Fig.5 and Fig.6 - App Constants and CRUD - Configuring App Constants and implementing CRUD functionality</b></figcaption>
+</figure>
+
+
 
 
 
