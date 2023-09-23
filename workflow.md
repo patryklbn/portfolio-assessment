@@ -80,6 +80,120 @@ With the core setup in place, I integrated **CRUD** operations into the `Contine
   <figcaption><b>Fig.5 and Fig.6 - App Constants and CRUD - Configuring App Constants and implementing CRUD functionality</b></figcaption>
 </figure>
 
+### Unit Testing
+
+A measure of the success of my issue is: "Unit tests pass for all CRUD operations." Therefore, I embarked on the process of implementing comprehensive unit tests..
+
+To begin, I created a new project within my solution, opting for the **NUnit Test project** under the **Tests** option. Just like I did with my library, I added the necessary SQLite packages to handle SQLite functionalities. To facilitate the tests, I incorporated a dependency to my "Continent" library, granting seamless access.
+
+The cornerstone of my testing process starts with setting up a database instance specifically tailored for testing. From there, I initialize a temporary database solely for the purpose of these tests. 
+
+```
+   public class Tests
+    {
+
+        // The database instance for the tests
+        private ContinentDatabase _db;
+
+        [SetUp]
+        public void Setup()
+        {
+            // Initializes a temporary directory for testing the database
+            var tempDirectory = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
+
+            Directory.CreateDirectory(tempDirectory);
+
+            _db = new ContinentDatabase(tempDirectory);
+        }
+```
+
+Subsequently, I create methods to rigorously test the CRUD operations: Create, Read, Update, and Delete. Each test was designed to ensure the robustness and accuracy of the database functionalities. 
+
+```
+        [Test]
+        public void AddContinentTest()
+        {
+            // Initial count of continnts
+            var firstCount = _db.GetContinents().Count();
+
+            // Add the test continent to the database
+            var newContinent = new Continent { name = "Europe" };
+
+            // Add the test continent to the database
+            _db.AddContinent(newContinent);
+
+            // Ensure the continent count increased by one
+            var secondCount = _db.GetContinents().Count();
+            Assert.AreEqual(firstCount + 1, secondCount);
+        }
+
+        [Test]
+        public void GetContinentTest()
+        {
+            // New continent for testing
+            var newContinent = new Continent { name = "Australia" };
+
+            // Add the test continent to the database
+            _db.AddContinent(newContinent);
+
+            // Ensure the retrieved continent matches the test continent
+            var retrievedContinent = _db.GetContinents().FirstOrDefault(c => c.name == "Australia");
+            Assert.IsNotNull(retrievedContinent);
+            Assert.AreEqual("Australia", retrievedContinent.name);
+        }
+
+        [Test]
+        public void UpdateContinentTest()
+        {
+            // New continent for testing
+            var newContinent = new Continent { name = "Asia" };
+            _db.AddContinent(newContinent);
+
+            // Updated name for the test continent
+            var updatedName = "Europe";
+
+            // Add the first test continent to the datebase
+            _db.UpdateContinent(newContinent);
+
+            // Update name of the continent
+            newContinent.name = updatedName;
+
+            // Add the continent with the new name to the database
+            _db.AddContinent(newContinent);
+
+            // Ensure the retrieved continent's name matches the updated name
+            var retrievedContinent = _db.GetContinents().FirstOrDefault(c => c.name == updatedName);
+            Assert.IsNotNull(retrievedContinent);
+            Assert.AreEqual(updatedName, retrievedContinent.name);
+        }
+
+        [Test]
+        public void DeleteContinentTest()
+        {
+            // Add a test continent to the database
+            var testContinentName = "Africa";
+            var testContinent = new Continent { name = testContinentName };
+            _db.AddContinent(testContinent);
+
+            // Ensure the continent was added
+            var addedContinent = _db.GetContinent(testContinentName);
+            Assert.IsNotNull(addedContinent, "Continent was not added successfully");
+
+            // Delete the test continent from the database
+            _db.DeleteContinent(testContinentName);
+
+            // Ensure the continent was deleted
+            var deletedContinent = _db.GetContinent(testContinentName);
+            Assert.IsNull(deletedContinent, "Continent was not deleted successfully.");
+        }
+```
+
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/19.png?raw=true" alt="Unit Tests">
+  <figcaption><b>Fig.7 - Unit Tests - Successfully passed unit tests.<b></figcaption>
+</figure>
+
+
 
 
 
