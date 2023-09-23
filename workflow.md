@@ -190,7 +190,7 @@ Subsequently, I create methods to rigorously test the CRUD operations: Create, R
 
 <figure>
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/19.png?raw=true" alt="Unit Tests">
-  <figcaption><b>Fig.7 - Unit Tests - Successfully passed unit tests.<b></figcaption>
+  <figcaption><b>Fig.7 - Unit Tests - Successfully passed unit tests.</b>b></figcaption>
 </figure>
 
 ### Finalizing the Development Process
@@ -218,13 +218,26 @@ git add path/tofile
 git commit -m "brief description"
 ```
 <figure>
-  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/20.png?raw=true" alt="Unit Tests">
-  <figcaption><b>Fig. - GitHub - Commit messages<b></figcaption>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/20.png?raw=true" alt="GitHub">
+  <figcaption><b>Fig.8 - GitHub - Commit messages</b></figcaption>
 </figure>
 
 #### Pull request 
 
-After committing my changes, I initiated a pull request on our group's GitHub repository. I included comments detailing my accomplishments and the modifications I made. After ensuring everything aligned with our group's workflow, I merged my feature branch into the development branch. Although I chose to keep the feature branch for potential future reference, it's worth noting that, according to common GitHub workflows, feature branches are typically deleted after being merged into the main or development branch.
+After committing my changes, I initiated a [pull request](https://github.com/timh1975/UNDAC-App-Project/pull/25 "Pull request") on our group's GitHub repository. I included comments detailing my accomplishments and the modifications I made. After ensuring everything aligned with our group's workflow, I merged my feature branch into the development branch. Although I chose to keep the feature branch for potential future reference, it's worth noting that, according to common GitHub workflows, feature branches are typically deleted after being merged into the main or development branch.
 
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/21.png?raw=true" alt="Kanban board">
+  <figcaption><b>Fig.9 - GitHub - Pull request with comment</b></figcaption>
+</figure>
 
+#### Update the task board 
 
+After completing my issue, I navigated to our group's Kanban board and moved my task card from "In Progress" to "Done". This action automatically closed the [issue on GitHub](https://github.com/timh1975/UNDAC-App-Project/issues/5 "Issue 5") as well.
+
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/22.png?raw=true" alt="Kanban board">
+  <figcaption><b>Fig.10 - zube.io - Updated Kanban board</b></figcaption>
+</figure>
+
+# Reflection
