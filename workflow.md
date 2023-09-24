@@ -89,7 +89,7 @@ With the core setup in place, I integrated **CRUD** operations into the `Contine
 
 ### Unit Testing
 
-A measure of the success of my issue is: "Unit tests pass for all CRUD operations." Therefore, I embarked on the process of implementing comprehensive unit tests..
+A measure of the success of my issue is: "Unit tests pass for all CRUD operations." Therefore, I embarked on the process of implementing comprehensive unit tests.
 
 To begin, I created a new project within my solution, opting for the **NUnit Test project** under the **Tests** option. Just like I did with my library, I added the necessary SQLite packages to handle SQLite functionalities. To facilitate the tests, I incorporated a dependency to my "Continent" library, granting seamless access.
 
