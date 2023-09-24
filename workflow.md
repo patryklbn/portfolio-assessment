@@ -10,6 +10,13 @@ This portfolio entry provides an overview of my understanding and application of
 * Ensuring that work aligns with the Definition of Done (DoD)
 * Creating pull requests
 
+ ###### Contents
+*  [Accepting the task](https://github.com/patryklbn/portfolio-assessment/blob/master/workflow.md#accepting-the-task)
+*  [Development](https://github.com/patryklbn/portfolio-assessment/blob/master/workflow.md#development)
+*  [Unit Testing](https://github.com/patryklbn/portfolio-assessment/blob/master/workflow.md#unit-testing)
+*  [Finalizing the Development Process](https://github.com/patryklbn/portfolio-assessment/blob/master/workflow.md#finalizing-the-development-process)
+*  [Reflection](https://github.com/patryklbn/portfolio-assessment/blob/master/workflow.md#reflection)
+
 The specific issue tackled involved creating a local database using SQLite, implementing CRUD functionality, and ensuring its reliability through unit tests.
 
 ## Task workflow
@@ -207,7 +214,7 @@ After ensuring that my work aligns with the defined criteria, I was ready to com
 
 #### Committing changes
 
-Committing changes is an essential part of version control. It means saving our work to the local repository. It's good to commit often, like after finishing a feature or fixing a bug. This way, we capture small changes and make things clear for anyone reviewing.
+Committing changes is an essential part of version control. It means saving our work to the local repository. It's beneficial to commit frequently, especially after completing a feature or resolving a bug. This way, we capture small changes and make things clear for anyone reviewing.
 
 After I finished my feature, I broke it down into three separate commits. Each one has a clear message that says what I did. This keeps things organized.
 
@@ -224,20 +231,46 @@ git commit -m "brief description"
 
 #### Pull request 
 
-After committing my changes, I initiated a [pull request](https://github.com/timh1975/UNDAC-App-Project/pull/25 "Pull request") on our group's GitHub repository. I included comments detailing my accomplishments and the modifications I made. After ensuring everything aligned with our group's workflow, I merged my feature branch into the development branch. Although I chose to keep the feature branch for potential future reference, it's worth noting that, according to common GitHub workflows, feature branches are typically deleted after being merged into the main or development branch.
+After committing my changes, I initiated a [pull request](https://github.com/timh1975/UNDAC-App-Project/pull/25 "Pull request") on our group's GitHub repository. I included comments detailing my accomplishments and the modifications I made. After ensuring everything aligned with our group's workflow, I merged my feature branch into the development branch.(Fig.9)
 
 <figure>
-  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/21.png?raw=true" alt="Kanban board">
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/21.png?raw=true" alt="GitHub">
   <figcaption><b>Fig.9 - GitHub - Pull request with comment</b></figcaption>
 </figure>
+<br>
+<br>
+However, post-merging, I realised that some crucial files, like the library and unit tests, were absent. For a detailed account of this challenge, you can refer to [this section](https://github.com/patryklbn/portfolio-assessment/blob/master/workflow.md#reflection). To address this oversight, I promptly added the missing files, verified that everything was correctly positioned, and then created [a new pull request](https://github.com/timh1975/UNDAC-App-Project/pull/30). I made sure to leave a descriptive comment explaining the essence of the additional pull request.(Fig.10)
+
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/23.png?raw=true" alt="GitHub">
+  <figcaption><b>Fig.10 - GitHub - A new pull request with comment</b></figcaption>
+</figure>
+<br>
+<br>
+Although I chose to keep the feature branch for potential future reference, it's worth noting that, according to common GitHub workflows, feature branches are typically deleted after being merged into the main or development branch.
 
 #### Update the task board 
 
-After completing my issue, I navigated to our group's Kanban board and moved my task card from "In Progress" to "Done". This action automatically closed the [issue on GitHub](https://github.com/timh1975/UNDAC-App-Project/issues/5 "Issue 5") as well.
+After completing my issue, I navigated to our group's Kanban board and moved my task card from "In Progress" to "Done". This action automatically closed the [issue on GitHub](https://github.com/timh1975/UNDAC-App-Project/issues/5 "Issue 5") as well.(Fig.11)
 
 <figure>
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/22.png?raw=true" alt="Kanban board">
-  <figcaption><b>Fig.10 - zube.io - Updated Kanban board</b></figcaption>
+  <figcaption><b>Fig.11 - zube.io - Updated Kanban board</b></figcaption>
 </figure>
 
 # Reflection
+
+#### Difficulties
+
+I faced two main problems while working on this task:
+
+**Unit Test Issues**: I had a tough time adding unit tests. My main app was built using MAUI, which uses a multi-platform framework. On the other hand, the NUnit tests needed the NET.6 or NET.7 frameworks. I couldn't get them to work together. So, I made a separate library for my local database and the access class. This way, both my main app and the unit tests could use this library without any problems.
+
+**File Organisation**: Because of the first problem, I ended up placing the new library and unit test folders outside of the GitHub repository. This meant they were missing when I tried to commit and make a pull request. I tried moving these files, but it caused more problems. In the end, I had to back up my code, delete the wrongly placed projects, and add them back correctly. Then, I could add the missing library and unit test to my feature branch.
+
+This second issue taught me to double-check everything. Our team's workflow is that the person making a pull request can also approve it. But, because of this issue, I realised it's better if someone else reviews it. That way, they might spot something you missed.
+
+#### Improving the Process
+
+I think our Definition of Done (DoD) could be better. One thing to add might be to check that the whole project is correctly lined up with the GitHub repository. As for our task board, it's been good so far. The Kanban board on zube.io works well with GitHub and is easy to use.
+
