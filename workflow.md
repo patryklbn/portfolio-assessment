@@ -239,15 +239,14 @@ After committing my changes, I initiated a [pull request](https://github.com/tim
 </figure>
 <br>
 <br>
-However, post-merging, I realised that some crucial files, like the library and unit tests, were absent. For a detailed account of this challenge, you can refer to [this section](https://github.com/patryklbn/portfolio-assessment/blob/master/workflow.md#difficulties "Difficulties") . To address this oversight, I promptly added the missing files, verified that everything was correctly positioned, and then created [a new pull request](https://github.com/timh1975/UNDAC-App-Project/pull/30). I made sure to leave a descriptive comment explaining the essence of the additional pull request.(Fig.10)
 
+However, post-merging, I realised that some crucial files, like the library and unit tests, were absent. For a detailed account of this challenge, you can refer to [this section](https://github.com/patryklbn/portfolio-assessment/blob/master/workflow.md#difficulties "Difficulties") . To address this oversight, I promptly added the missing files, verified that everything was correctly positioned, and then created [a new pull request](https://github.com/timh1975/UNDAC-App-Project/pull/30). I made sure to leave a descriptive comment explaining the essence of the additional pull request.(Fig.10)
 <figure>
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/23.png?raw=true" alt="GitHub">
   <figcaption><b>Fig.10 - GitHub - A new pull request with comment</b></figcaption>
 </figure>
 <br>
 <br>
-
 Although I chose to keep the feature branch for potential future reference, it's worth noting that, according to common GitHub workflows, feature branches are typically deleted after being merged into the main or development branch.
 
 #### Update the task board 
