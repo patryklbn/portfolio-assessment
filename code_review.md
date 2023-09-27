@@ -2,7 +2,7 @@
 
 This portfolio entry highlights my skills in C# code review and refactoring. It demonstrates how I detect coding issues and improve them using best practices.
 
-The featured code was selected from a series of C# code snippets I reviewed. Each snippet presented in the challenge had one or more issues, and the goal was to spot and rectify them.
+The featured code was selected from a series of C# code snippets I reviewed. Each snippet presented in the challenge had one or more issues, and the goal was to spot and rectify them. 
 
 ### Original code
 ```
