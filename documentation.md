@@ -79,5 +79,70 @@ public class ContinentDatabase
 
 In the improved version of the code, I introduced a `CreateTable` method to encapsulate the table creation logic. This separates the responsibility of table creation from the primary task of the `ContinentDatabase`, which is to initialize the database. By doing this, I've adhered to the ***Single Responsibility Principle*** ensuring that each method has a single task. Additionally, the revised code is more self-descriptive, allowing for the removal of unnecessary comments.
 
-# Documentation 
+# Doxygen
+
+In this section, I will introduce examples of Doxygen, a tool that automatically generates documentation from source code. Doxygen can produce both online (in HTML) and offline (in LaTeX) documentation. Additionally, it can visualize the relationships between various elements through dependency graphs, inheritance diagrams, and collaboration diagrams. This tool is particularly beneficial for large organizations with extensive code bases, as it facilitates the creation of easy-to-read documentation.
+
+<screenshot from overall HTML generated, can be main page of class>
+
+Documentation is generated through comments in the code, formatted with XML-style tags. These tags are typically used in C# code comments and usually start with /// or /** ... */. Below are some examples of Doxygen comments and how they are generated as documentation.
+
+```
+/// <summary>
+/// SQLite Database creating the table Continents,
+/// with CRUD functionality.
+/// </summary>
+public class ContinentDatabase
+{
+    /// <summary>
+    /// SQLite Connection database instance
+    /// </summary>
+    private readonly SQLiteConnection db;
+```
+
+The <summary> tag provides a brief description of a class, method, or property. In the example above, the <summary> tag offers a concise description of the ContinentDatabase class, detailing its purpose and functionality. The next tag, describes the database instance db
+
+<screenshot of HTML generated with those both summary>
+
+```
+    /// <summary>
+    /// The ContinentDatabase contructor takes one parameter with database path,
+    /// CreateTable() method creates Continent table
+    /// </summary>
+    /// <param name="databasePath">the connection string to connect to the
+    /// database holding the content of database path</param>
+    public ContinentDatabase(string databasePath)
+    {
+        _databasePath = Path.Combine(databasePath, DatabaseFilename);
+
+        Console.WriteLine("Initializing database connection...");
+        db = new SQLiteConnection(_databasePath, Flags);
+
+        CreateTable();
+    }
+```
+
+The ``<summary>`` tag can also be combined with other tags. In the example above, the ``<summary>`` tag describes the ContinentDatabase constructor and its functionality. Additionally, the ``<param name="paramName">`` tag is used to document the ``databasePath`` parameter.
+
+<screenshot of HTML generated for this constructor>
+
+```
+    /// <summary>
+    /// The AddContinent method adds new continent to the database
+    /// <param name="continent">the continent instance add to the database</param>
+    /// <returns>New continent instance</returns>
+    /// </summary>
+
+    public int AddContinent(Continent continent)
+    {
+        return db.Insert(continent);
+    }
+```
+
+In this example, the ``<summary>`` tag describes the ``AddContinent`` method and its functionality. The ``<param name="paramName">`` tag is used to document the ``continent`` parameter, while the ``<returns>`` tag provides documentation for the ``return`` value of the method.
+
+< screenshot of HTML generated for AddContinent >
+
+(SUMMARY OF DOXYGEN)
+
 
