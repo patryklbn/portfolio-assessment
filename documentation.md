@@ -2,7 +2,7 @@
 
 This portfolio entry focuses on clean code principles and the use of Doxygen to generate documentation. I will briefly introduce a few key aspects of clean code principles and then apply them to refine the code I wrote in week 3. Next, I will generate project documentation using Doxygen. Finally, I will highlight examples from my code where I have eliminated the need for comments by adhering to the principles of clean code.
 
-# Clean code
+## Clean code
 
 One of the most important aspects of software development is writing clean code. It promotes clear documentation and is crucial for ensuring others can understand our code.
 
@@ -21,7 +21,7 @@ A few key aspects of clean code are:
 
 ***KISS - Keep it Simple, Stupid*** - Sticking to simplicity increases code clarity and eliminates the risk of error. Simpler code is not only more readable but also reduces the chance of errors.
 
-***Single Responsibility Principle*** -  NEED TO ADD !!!!!!
+***Single Responsibility Principle*** -  Each class or method should only be responsible for one thing. This ensures better readability of the code, minimises the risk of problems in future modifications and the code is easier to maintain and develop.
 
 ### Clean code in practice
 
@@ -79,7 +79,7 @@ public class ContinentDatabase
 
 In the improved version of the code, I introduced a `CreateTable` method to encapsulate the table creation logic. This separates the responsibility of table creation from the primary task of the `ContinentDatabase`, which is to initialize the database. By doing this, I've adhered to the ***Single Responsibility Principle*** ensuring that each method has a single task. Additionally, the revised code is more self-descriptive, allowing for the removal of unnecessary comments.
 
-# Doxygen
+## Doxygen
 
 In this section, I will introduce examples of Doxygen, a tool that automatically generates documentation from source code. Doxygen can produce both online (in HTML) and offline (in LaTeX) documentation. Additionally, it can visualize the relationships between various elements through dependency graphs, inheritance diagrams, and collaboration diagrams. This tool is particularly beneficial for large organizations with extensive code bases, as it facilitates the creation of easy-to-read documentation.
 
@@ -111,7 +111,7 @@ public class ContinentDatabase
     public const SQLiteOpenFlags Flags = SQLiteOpenFlags.ReadWrite | SQLiteOpenFlags.Create | SQLiteOpenFlags.SharedCache;
 ```
 
-The ``<summary>`` tag provides a brief description of a class, method, or property. In the example above, the ``<summary>`` tag offers a concise description of the ``ContinentDatabase`` class, detailing its purpose and functionality. The subsequent tags describe the public variables ``DatabaseFilename`` and ``Flags``. Private fields ``db`` and ``_databasePath`` are without comments because, by default, Doxygen does not generate documentation for private fields, as they are not useful for external users.
+The ``<summary>`` tag provides a brief description of a class, method, or property. In the example above, the ``<summary>`` tag offers a concise description of the ``ContinentDatabase`` class, detailing its purpose and functionality. The subsequent tags describe the public variables ``DatabaseFilename`` and ``Flags``. Private fields ``db`` and ``_databasePath`` are without comments because, by default, Doxygen does not generate documentation for private fields, as they are not useful for external users. Fig.2
 
 
 <figure>
@@ -140,7 +140,7 @@ The ``<summary>`` tag provides a brief description of a class, method, or proper
     }
 ```
 
-The ``<summary>`` tag can also be combined with other tags. In the example above, the ``<summary>`` tag describes the ContinentDatabase constructor and its functionality. Additionally, the ``<param name="paramName">`` tag is used to document the ``databasePath`` parameter.
+The ``<summary>`` tag can also be combined with other tags. In the example above, the ``<summary>`` tag describes the ContinentDatabase constructor and its functionality. Additionally, the ``<param name="paramName">`` tag is used to document the ``databasePath`` parameter. Fig.3
 
 <figure>
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/26.png?raw=true" alt="App Store">
@@ -162,7 +162,7 @@ The ``<summary>`` tag can also be combined with other tags. In the example above
     }
 ```
 
-In this example, the ``<summary>`` tag describes the ``DeleteContinent`` method and its functionality. The ``<param name="paramName">`` tag is used to document the ``continent`` parameter, while the ``<returns>`` tag provides documentation for the ``return`` value of the method.
+In this example, the ``<summary>`` tag describes the ``DeleteContinent`` method and its functionality. The ``<param name="paramName">`` tag is used to document the ``continent`` parameter, while the ``<returns>`` tag provides documentation for the ``return`` value of the method. Fig.4
 
 
 
@@ -173,4 +173,43 @@ In this example, the ``<summary>`` tag describes the ``DeleteContinent`` method 
 <br>
 <br>
 
+## Eliminated comments
 
+Clean code practices often eliminate the need for comments. Here are three examples of code improvements by adhering to the principles of clean code:
+
+**1.**
+```
+public int AddContinent(Continent continent)
+{
+    return db.Insert(continent);
+}
+```
+The method `AddContinent` is self-descriptive; it clearly explains its purpose. Similarly, the variable `continent` indicates what kind of data it holds.
+
+
+**2.**
+```
+public ContinentDatabase(string databasePath)
+{
+    _databasePath = Path.Combine(databasePath, DatabaseFilename);
+    Console.WriteLine("Initializing database connection...");
+    db = new SQLiteConnection(_databasePath, Flags);
+    CreateTable();
+}
+private void CreateTable()
+{
+    Console.WriteLine("Setting up Continent table...");
+    db.CreateTable<Continent>();
+}
+```
+By breaking down the functionality and separating it into the `CreateTable` method, adhering to the **Single Responsibility Principle**, the need for comments was eliminated. Now, with each method having its own functionality, the method's name itself explains its purpose.
+
+
+**3.**
+```
+public const string DatabaseFilename = "ContinentDatabase.db3";
+```
+Meaningful naming is important not only for variables but also for their values. In this example, the variable `DatabaseFilename` has the value _ContinentDatabase.db3_, which is clear and self-descriptive, eliminating the need for comments.
+
+
+Adhering to clean code practices can eliminate the need for comments in various ways. The code becomes cleaner, is self-describing, and intuitive to read.
