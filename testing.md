@@ -1,8 +1,8 @@
 # Testing
 
-This portfolio entry is dedicated to my experiences during the practical exercise of "test battles" in week 6, showcasing my understanding of and skills in testing. In this challenge, we were given a template repository containing a partially completed MAUI application for a Hangman game. Each team had to implement the required methods and create unit tests for them. The unit tests were created using the xUnit framework.
+This portfolio entry shows my understanding and skills in testing based on the practical exercise "test battles". In this challenge, we were given a template repository with a partially completed MAUI application for a Hangman game. Each team had to implement the required methods and create unit tests for them. The unit tests were created using the xUnit framework. After the challenge, two teams were cross-tested, unit tests of one team and test code of another.
 
-I will detail two unit tests that I wrote during this exercise. I believe these instances effectively illustrate my approach to testing.
+I will detail two unit tests that I wrote during this exercise for two methods. I believe these instances effectively illustrate my approach to testing.
 
 ## Unit tests
 
@@ -36,8 +36,7 @@ namespace UnitTestProject
 
 
 
-ADD ABOUT USING AND CHANGED ACCES TO THE CLASS
-
+Before I started testing the `SelectWord` method, I added the using directive `Hangman.Models` and changed `HangmanWords.cs` to public to access this class in my unit test
 
 The test utilizes the [Fact] attribute to verify if the `SelectWord` method returns a word from the predefined `HangmanWords.EasyWords` list found in the HangmanWords.cs class, based on the selected difficulty. Firstly, an instance of the `GamePage` object is created, specifying "Easy" as the difficulty level. The `GamePage class` is responsible for managing the game logic.
 
@@ -80,7 +79,7 @@ The test utilizes the [Fact] attribute, to verify a specific aspect of the metho
 
 First, the test initializes an instance of the `GamePage` class, setting "Easy" as the difficulty level. 
 
-Upon this setup, the test invokes the `ResetDisplay` method with "apple" as the argument, simulating the start of a new game where "apple" is the word to guess. The method is expected to update the UI elements, particularly the labels representing the letters of the new word.
+The test invokes the `ResetDisplay` method with "apple" as the argument, simulating the start of a new game where "apple" is the word to guess. The method is expected to update the labels representing the letters of the new word.
 
 The main focus here is on the first two letters of "apple," represented by `letter1` and `letter2`. The test retrieves these labels from the UI and checks their text properties. Next, assertions validate that these labels reflect the characters 'a' and 'p', respectively.
 
