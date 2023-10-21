@@ -85,12 +85,12 @@ The main focus here is on the first two letters of "apple," represented by `lett
 
 Testing this method is important confirming that the game's visual setup correctly corresponds to the new game state, ensuring consistency and reliability in the gameplay experience.
 
-##### Run tests 
+#### Running Tests
 
-Both my tests were created as a seperate classes with meaningful names describig which method is were tested and what it re for better readibility and 
+Both of my tests were created as separate classes with meaningful names that describe the methods they're testing and what those methods return, enhancing readability and facilitating integration with the tests from other team members. After running both tests and ensuring they passed, I merged my feature branch into the main branch.
 
 <figure>
-  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/28.png?raw=true" alt="Unit Test Explorer">
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/29.png?raw=true" alt="Unit Test Explorer">
   <figcaption><b>Fig.1 - Unit Tests Explorer - All tests passed</b></figcaption>
 </figure>
 
