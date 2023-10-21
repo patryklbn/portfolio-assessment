@@ -85,7 +85,14 @@ The main focus here is on the first two letters of "apple," represented by `lett
 
 Testing this method is important confirming that the game's visual setup correctly corresponds to the new game state, ensuring consistency and reliability in the gameplay experience.
 
+##### Run tests 
 
+Both my tests were created as a seperate classes with meaningful names describig which method is were tested and what it re for better readibility and 
+
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/28.png?raw=true" alt="Unit Test Explorer">
+  <figcaption><b>Fig.1 - Unit Tests Explorer - All tests passed</b></figcaption>
+</figure>
 
 #### Evaluation
 During cross-testing, my unit test TestResetDisplay_ReturnsChangedLabel was used to test the code from other teams. In all cases, my method failed, resulting in an error:
