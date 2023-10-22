@@ -111,7 +111,7 @@ UnitTestProject.TestResetDisplay.TestResetDisplay_ReturnsChangedLabel [FAIL]
 
 The error clearly shows that instead of the expected string "a," my test retrieved a "null" value. Reflecting on this, I believe there could be a couple of reasons behind the test failure:
 
-**Unfinished Method**: Our team's ResetDisplay method wasn't fully completed. It was set up to change the state of the word labels but didn't handle the reset of images. This partial functionality might have impacted the test, especially since the other teams might have had a more comprehensive implementation of the method.
+**Unfinished Method**: Our team's `ResetDisplay` method wasn't fully completed. It was set up to change the state of the word labels but didn't handle the reset of images. This partial functionality might have impacted the test, especially since the other teams might have had a more comprehensive implementation of the method.
 
 **Different Implementation Approaches**: In my test, I assumed labels would be accessed and modified in a certain way, specifically through something like a FindMyLabel method. However, the other teams might have approached this functionality differently, leading to a mismatch between my test assumptions and their code.
 
