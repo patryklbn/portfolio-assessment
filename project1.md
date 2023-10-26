@@ -13,3 +13,29 @@ In each weak my portfolio will include:
 
 ## Issue
 
+All user stories were transferred to the GitHub issues on our team's repository and on our zube.io kanban board. Every team member was free to select the issue that they wanted to work on and assign it to themselves. The issue that I assigned to myself this week was:
+<details><summary>As an UNDAC Deputy Team Leader I want to view a list of all local media agencies so that I can contact them immediately
+</summary>
+
+**End user goal:**
+To be able to send out information as efficiently as possible
+
+**End business goal:**
+To ensure that the mission has an appropriate channel of communication to the local population
+
+**Acceptance criteria:**
+
+* Media agencies can be listed
+* The list can be filtered by media type (e.g. 'press', 'radio', tv', etc.)
+* List filters can be cleared
+* Contact details for a particular agency can be readily viewed
+
+</details>
+
+In this task, I developed a feature for the UNDAC App allowing Deputy Team Leaders to swiftly access a list of local media agencies, crucial for outreach during missions. The functionality includes listing media agencies, filtering them by media type ("press", "radio", "tv"), clearing the filters, and providing a user-friendly display of contact details.
+This feature is key to ensuring that vital information is promptly disseminated to the local population through the most effective channels.
+
+### Implementation
+
+
+
