@@ -119,6 +119,11 @@ By sticking to these principles, I enhanced the robustness, readability, and mai
 
 My feature were developed as planned, fully working and meeting acceptace criteria from the issue.
 
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/33.png?raw=true" alt="UNDAC">
+  <figcaption><b>Fig.1 - UNDAC App - Implemented feature</b></figcaption>
+</figure>
+
 ## Testing 
 
 During the testing phase of my feature, I focused on the database and its operations. Tests were written using the xUnit framework, which referenced the main project. I began my testing by setting up a test database environment and then performed three tests to check if the operations were working correctly.
@@ -169,6 +174,14 @@ During the testing phase of my feature, I focused on the database and its operat
             Assert.True(allAgencies.Count > 0);
         }
 ```
+<br>
+<br>
+<br>
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/30.png?raw=true" alt="UNDAC">
+  <figcaption><b>Fig.2 - Tests - All tests passed</b></figcaption>
+</figure>
+
 
 ## Code Reviews 
 
