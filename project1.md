@@ -11,7 +11,7 @@ A team was provided a set of documented user stories and an entity relationship 
 
 ## Issue
 
-All user stories were transferred to the GitHub issues on our team's repository and on our zube.io kanban board. Every team member was free to select the issue that they wanted to work on and assign it to themselves. The [issue](https://github.com/timh1975/UNDAC-Project/issues/9) that I assigned to myself this week was:
+All user stories were transferred to the GitHub issues on our [team's repository](https://github.com/timh1975/UNDAC-Project) and on our zube.io kanban board. Every team member was free to select the issue that they wanted to work on and assign it to themselves. The [issue](https://github.com/timh1975/UNDAC-Project/issues/9) that I assigned to myself this week was:
 <details><summary>As an UNDAC Deputy Team Leader I want to view a list of all local media agencies so that I can contact them immediately
 </summary>
 
