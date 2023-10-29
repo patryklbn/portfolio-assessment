@@ -3,13 +3,11 @@ This portfolio entry will demonstrate my ability to integrate the various softwa
 An App is built in the .NET framework as the development environment, with C# as the main programming language, and cross-platform compatibility using the .NET Multi-platform App UI (MAUI) framework.
 A team was provided a set of documented user stories and an entity relationship diagram, and the app would use an SQLite instance for all database operations.
 
-In each weak my portfolio will include:
-* A detailed summary of the issue I tackled.
-* Snippets from my code, complemented by commentary illustrating my adherence to good software design practices.
-* An explanatory overview of the test code I've written.
-* A reflective analysis of the changes requested in the code reviews, along with the adjustments I've made.
-* An insightful summary of any issues I've discovered while reviewing others' code.
-* A reflective segment pinpointing specific learnings, challenges, or observations I've encountered along the way.
+###### Contents
+*  [Issue](https://github.com/patryklbn/portfolio-assessment/blob/master/project1.md#issue)
+*  [Testing](https://github.com/patryklbn/portfolio-assessment/blob/master/project1.md#testing)
+*  [Code Reviews](https://github.com/patryklbn/portfolio-assessment/blob/master/project1.md#code-reviews)
+*  [Reflection](https://github.com/patryklbn/portfolio-assessment/blob/master/project1.md#reflection)
 
 ## Issue
 
@@ -121,7 +119,7 @@ By sticking to these principles, I enhanced the robustness, readability, and mai
 
 My feature were developed as planned, fully working and meeting acceptace criteria from the issue.
 
-### Testing 
+## Testing 
 
 During the testing phase of my feature, I focused on the database and its operations. Tests were written using the xUnit framework, which referenced the main project. I began my testing by setting up a test database environment and then performed three tests to check if the operations were working correctly.
 
@@ -172,7 +170,7 @@ During the testing phase of my feature, I focused on the database and its operat
         }
 ```
 
-### Code Reviews 
+## Code Reviews 
 
 Code reviews turned out to be quite challenging due to reliance on others in my group to contribute. Only a few people were active most of the time, engaging in the code reviews, and I faced the risk of being left without the opportunity to perform any code reviews. I contacted another student from a different group for code reviews, and I sent him my zipped code for review. In the meantime, one person from my group opened a PR, which allowed me to review his code. Additionally, I received feedback from a member of another team.
 
@@ -205,7 +203,7 @@ My second suggestion concerned the naming convention. I pointed out that paramet
 
 Lastly, I advised adding descriptive comments to sections of the code where their purpose wasn't clear, enhancing readability and maintainability for others who might work on the project in the future.
 
-# Reflection
+## Reflection
 
 ### Difficulties and Learning Outcomes
 
