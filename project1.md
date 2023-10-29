@@ -90,7 +90,7 @@ In the snippet of code presented below, I adhered to the **Single Responsibility
         }
 ```
 
-In another snippet of code below, we can observe several software engineering principles. Apart from good practices that also apply in this example mentioned earlier, such as the **Single Responsibility Principle (SRP)** by designing methods for specific tasks and meaningful names, a clear naming convention results in self-explanatory code and eliminates the need for comments.
+In another snippet of code below, we can observe several software engineering principles. Apart from good practices that also apply in this example mentioned earlier, such as the **Single Responsibility Principle (SRP)** by designing methods for specific tasks and **meaningful names**, a clear naming convention results in self-explanatory code and eliminates the need for **comments**.
 
 Furthermore, this snippet adheres to **DRY (Don't Repeat Yourself)** by separating the operations of inserting sample data and loading media agencies into different methods. This approach avoids redundancy, making the codebase more adaptable to future changes. It also follows the **KISS (Keep It Simple, Stupid)** principle, as the simplicity of methods, without any unnecessary complexity, not only makes the code more understandable but also reduces potential points of failure.
 
@@ -189,7 +189,7 @@ Code reviews turned out to be quite challenging due to reliance on others in my 
 
 ### Reviewing My Code
 
-The reviewed code came with two suggestions to improve my work. The first was related to naming conventions, suggesting a change in my class name from `mediaDB` to `MediaDB`, in line with the C# convention that class names should always start with an uppercase letter. This was something I overlooked while developing my feature, and it was quite an obvious mistake. To resolve this issue, I've renamed my class to `MediaDB`, change of the occurence of mediaDB in code to MediaDB, cleaned the project and restore it.
+The reviewed code came with two suggestions to improve my work. The first was related to naming conventions, suggesting a change in my class name from `mediaDB` to `MediaDB`, in line with the C# convention that class names should always start with an uppercase letter. This was something I overlooked while developing my feature, and it was quite an obvious mistake. To resolve this issue, I've renamed my class to `MediaDB`, changed all occurrences of 'mediaDB' in the code to 'MediaDB', cleaned the project, and restored it.
 
 The second suggestion I received was about improving how my database was initialized. Initially, I was calling the 'InitiateDataBase' method in every other method performing operations on the database, which wasn't efficient. I realised this approach could indeed make my code vulnerable because if, by any chance, the initialization method wasn't called, it could lead to failures during runtime.
 
