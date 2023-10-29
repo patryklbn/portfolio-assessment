@@ -117,7 +117,7 @@ Furthermore, this snippet adheres to **DRY (Don't Repeat Yourself)** by separati
 
 By sticking to these principles, I enhanced the robustness, readability, and maintainability of the software, making it easier for others to collaborate, update, and debug the code.
 
-My feature were developed as planned, fully working and meeting acceptace criteria from the issue.
+My feature was developed as planned, functioning fully and meeting the acceptance criteria set by the issue. After ensuring everything was working, I committed my changes, pushed my feature branch, and opened a [pull request](https://github.com/timh1975/UNDAC-Project/pull/42).
 
 <figure>
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/33.png?raw=true" alt="UNDAC">
