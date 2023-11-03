@@ -177,7 +177,7 @@ The test `FilterVehicles_ReturnsFilteredVehicles`, similar to the previous test,
 
 ### Improvments 
 
-In this week my work improves signifecten compare to the last week, mostly by adaptating solutions to my mistake from the previous week. ////CHANGE
+This week, my work has significantly improved compared to last week, mostly by adapting solutions to the mistakes I made in the previous week.
 
 When I create a branch for a new feature, I immediately check if I'm on the correct branch and if there are no other upstreams to the remote branches. I start using git commands in the terminal to double-check everything and rely less on the IDE. First, I create a new branch with the git command `git checkout -b name-of-branch`, then I check if my new branch doesn't have any remote upstreams by using `git branch -vv`, and then I check if there are no uncommitted changes on my local machine by using `git status`. Even though the git interface in Visual Studio is good and provides those functionalities, I think it's good to be familiar with the git commands, and I plan to operate using them from now on.
 
