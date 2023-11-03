@@ -172,6 +172,36 @@ The test `FilterVehicles_ReturnsFilteredVehicles`, similar to the previous test,
         Assert.All(result, vm => Assert.Contains(filter, vm.Type));
     }
 ```
+## Code Reviews 
+
+The code review process went much more smoothly than it did a week ago. Because my issue implementation took less time, I was able to open my pull request a few days earlier and look for a reviewer. On the same day, I agreed with another team member to review each other's code. In addition, I was asked by another person to code review on the same day, so I reviewed code from two members of my team this week.
+
+### Reviewing My Code
+
+
+### Reviewing Someone Else's Code
+
+This week I changed my method of reviewing code slightly, in addition to adding a general comment with suggested changes I also added comments on specific lines of code with example code.
+
+In the first [pull request](https://github.com/timh1975/UNDAC-Project/pull/39), the code looked well-organised and, given the amount of code written, I did not find many places for improvement in it. I suggested adding Doxygen comments for better documentation and changing the database operation methods to asynchronous methods. By making these changes, the application can handle other tasks while waiting for the database operations to complete. In one line of code, I added a comment on what such a change might look like. (Fig.1)
+<br>
+<br>
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/36.jpg?raw=true" alt="Code Review">
+  <figcaption><b>Fig.1 - Screenshot from GitHub showcasing a general comment along with in code comments during a code review of first pull request</b></figcaption>
+</figure>
+<br>
+<br>
+
+In the second [pull request](https://github.com/timh1975/UNDAC-Project/pull/40), the issue was not completed, and the amount of code to review was small. Due to the lack of a database or Model with properties, I suggested creating a Model which would allow for the creation of an object and the completion of the issue without using a database. Commenting on specific lines of code, I also suggested small formatting changes, removing unnecessary comments, replacing them with Doxygen comments, and refactoring one of the methods where a boolean expression always had a true value and was unnecessary in that condition. (Fig.2)
+<br>
+<br>
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/37.jpg?raw=true" alt="Code Review">
+  <figcaption><b>Fig.2 - Screenshot from GitHub showcasing a general comment along with in code comments during a code review of second pull request</b></figcaption>
+</figure>
+<br>
+<br>
 
 # Reflection
 
