@@ -105,3 +105,84 @@ Key **SOLID** principles introduced in this snippet of code are:
 **Dependency Inversion Principle**: The `VehiclesServices` class acts as a client and receives data access from the service, which is `VehicleDB`. It is specifically designed to accept an instance of `IVehiclesDB` through its constructor. This practice, known as **Dependency Injection**, is a core aspect of the **Dependency Inversion Principle**, one of the **SOLID** principles. It ensures that the `VehiclesServices` class remains minimally dependent on the implementation details of data access. By relying on abstractions rather than concrete implementations, the class becomes more resilient to changes, easier to test, and simpler to maintain.
 
 The provided snippet of code also introduces other good software practices like **meaningful names** - each method and variable has a meaningful name, making the code self-explanatory, which allows for the elimination of **unnecessary comments**.
+
+## Testing
+
+Implementing the `IVehiclesDB` interface allows the use of mocking frameworks, such as Moq, for unit testing. This approach simulates the behavior of the database and tests the operations of the `VehiclesServices` class in isolation, without the need for a live database connection. Such an improvement enhances the reliability and efficiency of the testing process, allowing a focus on the logic and behavior of the methods.
+
+The test `GetAllVehicles_ReturnsAllVehicles` sets up a mock database using the `IVehiclesDB` interface, inserts sample data, and calls `GetAllVehicles` to check if the return count of the list is correct. This ensures that the method correctly returns all vehicles, without any dependency on a live database, for better isolation.
+
+```
+    /// <summary>
+    /// Tests if GetAllVehicles method returns all vehicles
+    /// </summary>
+    [Fact]
+    public async Task GetAllVehicles_ReturnsAllVehicles()
+    {
+        // Arrange
+        var mockDb = new Mock<IVehiclesDB>();
+        var vehicles = new List<VehiclesModel>
+        {
+            new VehiclesModel { VehicleId = 1, Type = "Truck", Status = "Active" },
+            new VehiclesModel { VehicleId = 2, Type = "Car", Status = "Not Active" }
+        };
+        mockDb.Setup(db => db.GetAllVehiclesFromDB()).ReturnsAsync(vehicles);
+        var service = new VehiclesServices(mockDb.Object);
+
+        // Act
+        var result = await service.GetAllVehicles();
+
+        // Assert
+        Assert.Equal(2, result.Count);
+        mockDb.Verify(db => db.GetAllVehiclesFromDB(), Times.Once);
+    }
+```
+
+The test `FilterVehicles_ReturnsFilteredVehicles`, similar to the previous test, sets up a mock database using the `IVehiclesDB` interface and inserts sample data. It then sets a filter and calls the `FilterVehicles` method with the filter as a parameter, and asserts whether the returned list is appropriately filtered. This ensures that the method correctly filters data.
+
+```
+    /// <summary>
+    /// Tests if FilterVehicles method returns correct vehicles based on a given filter
+    /// </summary>
+    [Fact]
+    public async Task FilterVehicles_ReturnsFilteredVehicles()
+    {
+        // Arrange
+        var mockDb = new Mock<IVehiclesDB>();
+        var vehicles = new List<VehiclesModel>
+        {
+            new VehiclesModel { VehicleId = 1, Type = "Truck", Status = "Active" },
+            new VehiclesModel { VehicleId = 2, Type = "Car", Status = "Inactive" },
+            new VehiclesModel { VehicleId = 3, Type = "Motorcycle", Status = "Active" }
+        };
+        mockDb.Setup(db => db.GetAllVehiclesFromDB()).ReturnsAsync(vehicles);
+        var service = new VehiclesServices(mockDb.Object);
+        var filter = "Truck";
+
+        // Act
+        var result = await service.FilterVehicles(filter);
+
+        // Assert
+        var filteredVehicles = vehicles.Where(v =>
+            v.VehicleId.ToString().Contains(filter) ||
+            v.Type.Contains(filter) ||
+            v.Status.Contains(filter)).ToList();
+
+        Assert.Equal(filteredVehicles.Count, result.Count);
+        Assert.All(result, vm => Assert.Contains(filter, vm.Type));
+    }
+```
+
+# Reflection
+
+### Improvments 
+
+In this week my work improves signifecten compare to the last week, mostly by adaptating solutions to my mistake from the previous week. ////CHANGE
+
+When I create a branch for a new feature, I immediately check if I'm on the correct branch and if there are no other upstreams to the remote branches. I start using git commands in the terminal to double-check everything and rely less on the IDE. First, I create a new branch with the git command `git checkout -b name-of-branch`, then I check if my new branch doesn't have any remote upstreams by using `git branch -vv`, and then I check if there are no uncommitted changes on my local machine by using `git status`. Even though the git interface in Visual Studio is good and provides those functionalities, I think it's good to be familiar with the git commands, and I plan to operate using them from now on.
+
+Separating the business logic layer from the data and presentation layers significantly improved my application of the principles of clean code. Creating a new class, VehiclesServices, allows me to isolate these three layers, resulting in a more straightforward approach. Now, if I want to enhance my feature, I don't need to make changes in different layers because they don't rely on themselves. This approach also makes testing easier; for example, implementing a filtering method in `VehiclesServices` class instead of `VehiclesPage` allows me to test this method.
+
+Implementing a new class also allowed me to overcome my problem with mock testing. Dependency Injection, by passing the `IVehicles` interface of the VehiclesDB class, enables me to test the `VehiclesServices` methods without using an actual database. Last week, I thought that the problem was with my tests, and I'm happy that I didn't give up on mock testing because I learned about dependency injection, interfaces, and how they work.
+
+
