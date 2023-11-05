@@ -104,6 +104,12 @@ Key **SOLID** principles introduced in this snippet of code are:
 **Dependency Inversion Principle**: The `VehiclesServices` class acts as a client and receives data access from the service, which is `VehicleDB`. It is specifically designed to accept an instance of `IVehiclesDB` through its constructor. This practice, known as **Dependency Injection**, is a core aspect of the **Dependency Inversion Principle**, one of the **SOLID** principles. It ensures that the `VehiclesServices` class remains minimally dependent on the implementation details of data access. By relying on abstractions rather than concrete implementations, the class becomes more resilient to changes, easier to test, and simpler to maintain.
 
 The provided snippet of code also introduces other good software practices like **meaningful names** - each method and variable has a meaningful name, making the code self-explanatory, which allows for the elimination of **unnecessary comments**.
+<br>
+<br>
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/41.jpg?raw=true" alt="Feature">
+  <figcaption><b>Fig.1 - UNDAC App - Implemented feature</b></figcaption>
+</figure>
 
 ## Testing
 
@@ -171,6 +177,13 @@ The test `FilterVehicles_ReturnsFilteredVehicles`, similar to the previous test,
         Assert.All(result, vm => Assert.Contains(filter, vm.Type));
     }
 ```
+<br>
+<br>
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/42.png?raw=true" alt="Tests">
+  <figcaption><b>Fig.2 - Tests - All tests passed</b></figcaption>
+</figure>
+
 ## Code Reviews 
 
 The code review process went much more smoothly than it did a week ago. Because my issue implementation took less time, I was able to open my pull request a few days earlier and look for a reviewer. On the same day, I agreed with another team member to review each other's code. In addition, I was asked by another person to code review on the same day, so I reviewed code from two members of my team this week.
@@ -224,31 +237,33 @@ I've implemented the solution proposed by my reviewer to use the `throw` stateme
 ```
 
 Next, I committed my changes and pushed them to the remote repository. In my pull request, I informed the reviewer that the suggested changes were implemented, committed, and pushed to the remote branch, and I've marked the conversation as resolved.
-
-
-
-
+<br>
+<br>
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/40.png?raw=true" alt="Code Review">
+  <figcaption><b>Fig.3 - Screenshot from GitHub showcasing resolved conversation during reviewing my pull request </b></figcaption>
+</figure>
 
 ### Reviewing Someone Else's Code
 
 This week I changed my method of reviewing code slightly, in addition to adding a general comment with suggested changes I also added comments on specific lines of code with example code.
 
-In the first [pull request](https://github.com/timh1975/UNDAC-Project/pull/39), the code looked well-organised and, given the amount of code written, I did not find many places for improvement in it. I suggested adding Doxygen comments for better documentation and changing the database operation methods to asynchronous methods. By making these changes, the application can handle other tasks while waiting for the database operations to complete. In one line of code, I added a comment on what such a change might look like. (Fig.1)
+In the first [pull request](https://github.com/timh1975/UNDAC-Project/pull/39), the code looked well-organised and, given the amount of code written, I did not find many places for improvement in it. I suggested adding Doxygen comments for better documentation and changing the database operation methods to asynchronous methods. By making these changes, the application can handle other tasks while waiting for the database operations to complete. In one line of code, I added a comment on what such a change might look like. 
 <br>
 <br>
 <figure>
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/36.jpg?raw=true" alt="Code Review">
-  <figcaption><b>Fig.1 - Screenshot from GitHub showcasing a general comment along with in code comments during a code review of first pull request</b></figcaption>
+  <figcaption><b>Fig.4 - Screenshot from GitHub showcasing a general comment along with in code comments during a code review of first pull request</b></figcaption>
 </figure>
 <br>
 <br>
 
-In the second [pull request](https://github.com/timh1975/UNDAC-Project/pull/40), the issue was not completed, and the amount of code to review was small. Due to the lack of a database or Model with properties, I suggested creating a Model which would allow for the creation of an object and the completion of the issue without using a database. Commenting on specific lines of code, I also suggested small formatting changes, removing unnecessary comments, replacing them with Doxygen comments, and refactoring one of the methods where a boolean expression always had a true value and was unnecessary in that condition. (Fig.2)
+In the second [pull request](https://github.com/timh1975/UNDAC-Project/pull/40), the issue was not completed, and the amount of code to review was small. Due to the lack of a database or Model with properties, I suggested creating a Model which would allow for the creation of an object and the completion of the issue without using a database. Commenting on specific lines of code, I also suggested small formatting changes, removing unnecessary comments, replacing them with Doxygen comments, and refactoring one of the methods where a boolean expression always had a true value and was unnecessary in that condition. 
 <br>
 <br>
 <figure>
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/37.jpg?raw=true" alt="Code Review">
-  <figcaption><b>Fig.2 - Screenshot from GitHub showcasing a general comment along with in code comments during a code review of second pull request</b></figcaption>
+  <figcaption><b>Fig.5 - Screenshot from GitHub showcasing a general comment along with in code comments during a code review of second pull request</b></figcaption>
 </figure>
 <br>
 <br>
