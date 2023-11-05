@@ -1,13 +1,12 @@
 # Project work 2
 
-In this portfolio entry, I continue with the team project and demonstrate how my software engineering practice is improving. I'll cover in this entry:
+In this portfolio entry, I continue with the team project and demonstrate how my software engineering practice is improving. In this entry, I'll cover a descriptive summary of the issue, code snippets, and commentary that highlight good software engineering practices, a descriptive summary of the tests, a reflective summary from my code review, a descriptive summary of reviewing someone else's code, and reflections.
 
-* Descriptive summary of the issue.
-* Code snippets and commentary that highlight good software engineering practice.
-* Descriptive summary of the tests.
-* Reflective summary of code review changes.
-* Descriptive summary of peer code review.
-* General reflective section.
+###### Contents
+*  [Issue](https://github.com/patryklbn/portfolio-assessment/blob/master/project2.md#issue)
+*  [Testing](https://github.com/patryklbn/portfolio-assessment/blob/master/project2.md#testing)
+*  [Code Reviews](https://github.com/patryklbn/portfolio-assessment/blob/master/project2.md#code-reviews)
+*  [Reflection](https://github.com/patryklbn/portfolio-assessment/blob/master/project2.md#reflection)
 
 ## Issue 
 
@@ -34,11 +33,11 @@ In this week's task, I enhanced the UNDAC App by implementing a feature that all
 
 ### Implementation
 
-This week, I continued to build upon the foundation laid in the previous week. I created a SQL environment named `VehiclesDB` to manage operations related to my feature and to add sample data. The `VehiclesModel` is designed to represent data with the necessary properties. In an effort to enhance my approach, I introduced `VehiclesServices` to decouple the logic from the presentation layer. `VehiclesServices` is responsible for key operations such as retrieving the list of vehicles, filtering the list by a search string, and fetching vehicle details by their ID. The presentation layer, encapsulated within `VehiclesPage`, interfaces with the database to load data and manage UI events. For instance, it performs free-text filtering by invoking the filtering method from `VehiclesServices` and displays details for a selected vehicle.
+This week, I continued to build upon the foundation laid in the previous week. I created a SQL environment named `VehiclesDB` to manage operations related to my feature and to add sample data. The `VehiclesModel` is designed to represent data with the necessary properties. In an effort to enhance my approach, I introduced `VehiclesServices` class to decouple the logic from the presentation layer. `VehiclesServices` is responsible for key operations such as retrieving the list of vehicles, filtering the list by a search string, and fetching vehicle details by their ID. The presentation layer, encapsulated within `VehiclesPage`, interfaces with the database to load data and manage UI events. For instance, it performs free-text filtering by invoking the filtering method from `VehiclesServices` class and displays details for a selected vehicle.
 
 Here are some examples that were newly implemented and highlight good software practices.
 
-This week, I want to focus on my `VehiclesServices` class, which contains several software engineering principles. Separating the business logic layer from the presentation layer is itself a good software engineering practice because it allows us not to rely on the different layers. This means that changes in one part of the system, such as database schema changes, have minimal impact on other parts like the business logic or the UI.
+This week, I want to focus on my `VehiclesServices` class, which contains several software engineering principles. Separating the business logic layer from the presentation layer is itself a good software engineering practice because it allows us not to rely on the different layers. This means that changes in one part of the system, such as database changes, have minimal impact on other parts like the business logic or the UI.
 
 ```
     /// <summary>
@@ -108,7 +107,7 @@ The provided snippet of code also introduces other good software practices like 
 
 ## Testing
 
-Implementing the `IVehiclesDB` interface allows the use of mocking frameworks, such as Moq, for unit testing. This approach simulates the behavior of the database and tests the operations of the `VehiclesServices` class in isolation, without the need for a live database connection. Such an improvement enhances the reliability and efficiency of the testing process, allowing a focus on the logic and behavior of the methods.
+Implementing the `IVehiclesDB` interface allows the use of mocking frameworks, such as **Moq**, for unit testing. This approach simulates the behavior of the database and tests the operations of the `VehiclesServices` class in isolation, without the need for a live database connection. Such an improvement enhances the reliability and efficiency of the testing process, allowing a focus on the logic and behavior of the methods.
 
 The test `GetAllVehicles_ReturnsAllVehicles` sets up a mock database using the `IVehiclesDB` interface, inserts sample data, and calls `GetAllVehicles` to check if the return count of the list is correct. This ensures that the method correctly returns all vehicles, without any dependency on a live database, for better isolation.
 
@@ -178,6 +177,57 @@ The code review process went much more smoothly than it did a week ago. Because 
 
 ### Reviewing My Code
 
+Feedback on my pull request was provided in a comment to the class, where the reviewer spotted an empty exception in the try...catch statement. The comment included overall feedback on my class and useful links to the related issue in my code. After further investigation, I've also learned that leaving an empty catch statement is a bad practice.
+
+```
+            foreach (var sample in sampleData)
+            {
+                try
+                {
+                    var existingRecord = await _connection.Table<VehiclesModel>()
+                                            .Where(v => v.VehicleId == sample.VehicleId)
+                                            .FirstOrDefaultAsync();
+
+                    if (existingRecord == null)
+                    {
+                        await _connection.InsertAsync(sample);
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+```
+
+I've implemented the solution proposed by my reviewer to use the `throw` statement in my try...catch block. Now, the exception isn't ignored, and by rethrowing the exception, I can see if any errors occur.
+
+```
+            foreach (var sample in sampleData)
+            {
+                try
+                {
+                    var existingRecord = await _connection.Table<VehiclesModel>()
+                                            .Where(v => v.VehicleId == sample.VehicleId)
+                                            .FirstOrDefaultAsync();
+
+                    if (existingRecord == null)
+                    {
+                        await _connection.InsertAsync(sample);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw;
+                }
+            }
+```
+
+Next, I committed my changes and pushed them to the remote repository. In my pull request, I informed the reviewer that the suggested changes were implemented, committed, and pushed to the remote branch, and I've marked the conversation as resolved.
+
+
+
+
 
 ### Reviewing Someone Else's Code
 
@@ -207,12 +257,15 @@ In the second [pull request](https://github.com/timh1975/UNDAC-Project/pull/40),
 
 ### Improvments 
 
-This week, my work has significantly improved compared to last week, mostly by adapting solutions to the mistakes I made in the previous week.
-
 When I create a branch for a new feature, I immediately check if I'm on the correct branch and if there are no other upstreams to the remote branches. I start using git commands in the terminal to double-check everything and rely less on the IDE. First, I create a new branch with the git command `git checkout -b name-of-branch`, then I check if my new branch doesn't have any remote upstreams by using `git branch -vv`, and then I check if there are no uncommitted changes on my local machine by using `git status`. Even though the git interface in Visual Studio is good and provides those functionalities, I think it's good to be familiar with the git commands, and I plan to operate using them from now on.
 
-Separating the business logic layer from the data and presentation layers significantly improved my application of the principles of clean code. Creating a new class, VehiclesServices, allows me to isolate these three layers, resulting in a more straightforward approach. Now, if I want to enhance my feature, I don't need to make changes in different layers because they don't rely on themselves. This approach also makes testing easier; for example, implementing a filtering method in `VehiclesServices` class instead of `VehiclesPage` allows me to test this method.
+Separating the business logic layer from the data and presentation layers significantly improved my application of the principles of clean code. Creating a new class, `VehiclesServices`, allows me to isolate these three layers, resulting in a more straightforward approach. Now, if I want to enhance my feature, I don't need to make changes in different layers because they don't rely on themselves. This approach also makes testing easier, for example, implementing a filtering method in `VehiclesServices` class instead of `VehiclesPage` allows me to test this method.
 
-Implementing a new class also allowed me to overcome my problem with mock testing. Dependency Injection, by passing the `IVehicles` interface of the VehiclesDB class, enables me to test the `VehiclesServices` methods without using an actual database. Last week, I thought that the problem was with my tests, and I'm happy that I didn't give up on mock testing because I learned about dependency injection, interfaces, and how they work.
+Implementing a new class also allowed me to overcome my problem with mock testing. Dependency Injection, by passing the `IVehicles` interface of the `VehiclesDB` class, enables me to test the `VehiclesServices` methods without using an actual database. Last week, I thought that the problem was with my tests, and I'm happy that I didn't give up on mock testing because I learned about dependency injection, interfaces, and how they work.
 
+My code review method has also improved. By adding comments to specific lines of code, I believe it can help the person whose code I am reviewing understand which parts my suggestions are referencing.
+
+### Conclusion 
+
+This week, my work has significantly improved compared to last week, mostly by adapting solutions to the mistakes I made the previous week. I'm more familiar with Git commands and the process of pushing local branches to the remote repository. Implementing a three-layer architecture has helped me understand the structure of the application, and isolating these layers and implementing an interface have helped me overcome my problem with mock testing. Code reviewing went much more smoothly for me this week, and the group seems to be more cohesive. To fix the problem with the process of reviewing, we decided as a team to move our Kanban board from Zube.io to the GitHub repository and add different columns, like 'Ready for Code Review,' so anyone can see which branches are ready for reviewing.
 
