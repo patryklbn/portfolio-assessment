@@ -10,7 +10,7 @@ In this portfolio entry, I continue with the team project and demonstrate how my
 
 ## Issue 
 
-Similar to the previous week, everyone within the team was free to pick an issue and assign themselves to it. I picked an issue, assigned it to myself, and moved the card on the Kanban board from the backlog to the 'In Progress' section. The issue I've worked on:
+Similar to the previous week, everyone within the team was free to pick an issue and assign themselves to it. I picked an issue, assigned it to myself, and moved the card on the Kanban board from the backlog to the 'In Progress' section. The [issue](https://github.com/timh1975/UNDAC-Project/issues/20) I've worked on:
 
 <details><summary>As an UNDAC Team Support and Logistics Manager, I want to view the status (health, location, current deployments) of all team vehicles and other equipment so that I can respond to equipment requests
 </summary>
@@ -190,7 +190,7 @@ The code review process went much more smoothly than it did a week ago. Because 
 
 ### Reviewing My Code
 
-Feedback on my pull request was provided in a comment to the class, where the reviewer spotted an empty exception in the try...catch statement. The comment included overall feedback on my class and useful links to the related issue in my code. After further investigation, I've also learned that leaving an empty catch statement is a bad practice.
+Feedback on my [pull request](https://github.com/timh1975/UNDAC-Project/pull/56) was provided in a comment to the class, where the reviewer spotted an empty exception in the try...catch statement. The comment included overall feedback on my class and useful links to the related issue in my code. After further investigation, I've also learned that leaving an empty catch statement is a bad practice.
 
 ```
             foreach (var sample in sampleData)
