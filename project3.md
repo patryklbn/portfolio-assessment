@@ -281,6 +281,8 @@ public static class ServiceHelper
 #endif
 }
 ```
+<br>
+<br>
 
 This week, our team encountered a problem with merging feature branches that had been approved. Many team members faced various issues while working on their tasks, leading to numerous changes in the main project files. This resulted in many conflicts in the Development branch. One team member took on the task of resolving these conflicts and merging the feature branches into the Development branch. I believe this is a common problem in team development situations, and delegating one person to resolve conflicts is a good approach, ensuring that all conflicts are resolved using a consistent methodology.
 
