@@ -222,7 +222,7 @@ After my feature branch was approved and merged into the Development branch, ali
 
 This week, a team member asked me to review a specific class implementing ViewModel. He was still working on the issue and wanted to merge his [pull request](https://github.com/timh1975/UNDAC-Project/pull/103) into his test branch.
 
-In review i left two comments, one general comment discribing good overall structure of the code, and good implementation od data binding and advise to consider to add more doxygen comments. In second comment Ive provided feedback to the specific class which i was asked to review. 
+In the review, I left two comments: one general comment describing the good overall structure of the code and the effective implementation of data binding, along with advice to consider adding more Doxygen comments. In the second comment, I provided feedback on the specific class I was asked to review
 
 I advised my colleague to further separate the ViewModel class by introducing a service class and moving the data loading method logic there. I also suggested implementing an interface for the service class and injecting it into the ViewModel to avoid direct model instantiation. This solution could help achieve better separation of the presentation layer from the business layer and facilitate easier testing by allowing both the service class and ViewModel to be tested using mocked interfaces.
 
