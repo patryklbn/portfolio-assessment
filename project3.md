@@ -114,6 +114,11 @@ Implementing my feature following the MVVM pattern adheres to several fundamenta
 
 These practices contribute to a more robust, maintainable, and testable codebase.
 
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/43.jpg?raw=true" alt="Feature">
+  <figcaption><b>Fig.1 - UNDAC App - Implemented feature</b></figcaption>
+</figure>
+
 ### Testing
 
 Separating even more layers than last week allows me to test more components of my feature. Passing an interface of the database class to the service class allows me to test it without relying on a live database. The introduction of the ViewModel and passing the interface of the service class to it allow me to test the functionality of the ViewModel in isolation and without dependency on the service class. This completely separates the UI layer, reduces the complexity of the UI, and consequently reduces the need for extensive testing the UI.
@@ -181,5 +186,96 @@ The `LoadITSystems_ReturnObservableCollection` test makes sure that the `ITSyste
 
 Both tests work without the need for a real database or service, which means they are more reliable and not influenced by outside issues like database problems.
 
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/44.jpg?raw=true" alt="Feature">
+  <figcaption><b>Fig.2 - UNDAC App - Implemented feature</b></figcaption>
+</figure>
 
 
+## Code Reviews
+
+The code review process went smoothly for me this week. After few hours of opening my PR, one of the team member reviewd my code and I the same one the same day. 
+
+### Reviewing My Code 
+
+Feedback on my [pull request](https://github.com/timh1975/UNDAC-Project/pull/102) was provided through comments on two classes. The first comment on my Model class highlighted the effective use of an interface and the implementation of Doxygen comments. The second comment advised paying attention to the comments I make when committing changes to the Development branch. After opening the PR, I realized I had deleted some comments from the XAML file during a subsequent commit. I've since double-checked my code and comments to ensure all are necessary and clear.
+
+Although not specifically mentioned in the review, I noticed that despite having Doxygen comments, I hadn't generated any output. To address this, I first created a Doxyfile by navigating to my project directory in the terminal and running the command `doxygen -g Doxyfile`. Then, I created a Documentation folder in my solution. Next, I configured the Doxyfile by opening it in a text editor, setting the project name, and specifying the path to the project root directory. After running the command `doxygen Doxyfile`, I checked the produced HTML file, which correctly displayed output from my in code comments.
+
+This review process, while not directly related to the initial feedback, prompted me to reevaluate my comments and led to the realisation that I had forgotten to set up the output for Doxygen.
+
+While I was setting up my Doxygen output, another team member merged his feature branch, which included the Doxyfile. Therefore, I decided not to push my Doxyfile and output to the shared repository to avoid conflicts.
+
+After my feature branch was approved and merged into the Development branch, aligning with our team's workflow, I moved my issue card to Completed on the Kanban board and closed the issue.
+
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/44.jpg?raw=true" alt="Feature">
+  <figcaption><b>Fig.1 - UNDAC App - Implemented feature</b></figcaption>
+</figure>
+
+
+### Reviewing Someone Else's Code
+
+This week, a team member asked me to review a specific class implementing ViewModel. He was still working on the issue and wanted to merge his PR into his test branch.
+
+In review i left two comments, one general comment discribing good overall structure of the code, and good implementation od data binding and advise to consider to add more doxygen comments. In second comment Ive provided feedback to the specific class which i was asked to review. 
+
+I advised my colleague to further separate the ViewModel class by introducing a service class and moving the data loading method logic there. I also suggested implementing an interface for the service class and injecting it into the ViewModel to avoid direct model instantiation. This solution could help achieve better separation of the presentation layer from the business layer and facilitate easier testing by allowing both the service class and ViewModel to be tested using mocked interfaces.
+
+I think my suggestion could help my team member implement the MVVM pattern more effectively, which he was attempting to do. Therefore, since his original code was well-structured and he wanted to merge it into his test feature, I approved the PR and the branch was merged.
+
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/46.jpg?raw=true" alt="Feature">
+  <figcaption><b>Fig.1 - UNDAC App - Implemented feature</b></figcaption>
+</figure>
+
+## Reflections
+
+### Improvments 
+
+This week, my software engineering practice improved by enhancing the architecture while working on a new feature branch. Last week, I worked to align with a three-layer architecture, which led to a better understanding of the structure of the application, a better grasp of interfaces and dependency injection, and consequently, better isolation of each component and improved testing using a mocking framework. This week, I've implemented my feature following the MVVM pattern, which resulted in even better isolation. Each component is separate and doesn't rely on others, and the data layer, business layer, logic layer, and presentation layer are isolated, making the code more robust and easier to test. Introducing more interfaces has allowed me to test not only the database services but also the ViewModel, and further changes or enhancements in a particular layer don't affect the others.
+
+Team workflow improved this week by merging feature branches into the Development branch only after the feature branches were reviewed. This approach helped prevent unexpected merges into the Development plan, and by the end, I think everyone started to understand the process and team workflow better. Team members followed the agreed-upon branch naming convention and used the Kanban board appropriately.
+
+### Difficulties 
+
+While working on my issue, I encountered a problem with registering dependencies in the dependency container in the MauiProgram class. My registrations couldn't be resolved when I tried to use interfaces in the `MainPage` while adding an event handler to navigate to my page. After some investigation, it turned out to be a common problem when using the MAUI framework, and the solution was to introduce a helper class.
+
+Creating a static helper class `ServiceHelper` and initiating its object in the event handler method, with the interface to my service class passed as a parameter, resolved my problem. I was then able to retrieve services from the Dependency Injection container.
+
+```
+/// <summary>
+/// Provides helper methods to retrieve services from the Dependency Injection containter 
+/// </summary>
+
+public static class ServiceHelper
+{
+    public static TService GetService<TService>()
+        => Current.GetService<TService>();
+
+    public static IServiceProvider Current =>
+#if WINDOWS10_0_17763_0_OR_GREATER
+			MauiWinUIApplication.Current.Services;
+#elif ANDROID
+            MauiApplication.Current.Services;
+#elif IOS || MACCATALYST
+			MauiUIApplicationDelegate.Current.Services;
+#else
+			null;
+#endif
+}
+```
+
+This week, our team encountered a problem with merging feature branches that had been approved. Many team members faced various issues while working on their tasks, leading to numerous changes in the main project files. This resulted in many conflicts in the Development branch. One team member took on the task of resolving these conflicts and merging the feature branches into the Development branch. I believe this is a common problem in team development situations, and delegating one person to resolve conflicts is a good approach, ensuring that all conflicts are resolved using a consistent methodology.
+
+### Further Possible Improvements
+There are a couple of improvements we could make in the future to our team's workflow. After three weeks of working on tasks, our team has generated a large number of feature branches, making our repository a bit messy. In line with the GitHub workflow, I think it would be beneficial if everyone deleted their feature branch after it had been merged into the Development branch.
+
+Another improvement could be addressed in documentation. I chose not to add my Doxyfile to the shared repository since another team member had already pushed it. However, when I open the Doxygen configuration file, it sets a local path. Perhaps we could all share a Doxyfile configured only for the project directory and with the same project name, while keeping the generated documentation locally. This would avoid conflicts with files from the output and also allow us to generate all project documentation locally. Fetching all changes from the development branch and then generating output will ensure the documentation includes all features of the entire project.
+
+### Conclusion
+Within three weeks of collaborative work on the team project, I believe we have improved significantly as a team, and I have personally grown as a software engineer. After encountering a few issues at the beginning, such as with the code review process, the subsequent weeks went much more smoothly, and our workflow became better understood by everyone.
+
+The past three weeks taught me a lot about good software practices, including maintaining well-structured, documented, and clean code. I now have a better understanding of how the GitHub process works and have started performing operations directly in the terminal rather than in the IDE. I've also gained more insight into interfaces, dependency injection, how to separate different components of the application, and how to use mocking for unit testing.
+
+Overall, I'm pleased with the progress we've made as a team and the personal growth I've experienced. I believe the last few weeks have been particularly beneficial for me.
