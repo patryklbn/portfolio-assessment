@@ -234,7 +234,7 @@ I think my suggestion could help my team member implement the MVVM pattern more 
 </figure>
 
 
-## Reflections
+## Reflection
 
 ### Improvments 
 
