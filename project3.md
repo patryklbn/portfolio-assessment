@@ -71,8 +71,8 @@ Next, I've implemented the data layer. The `ITSystemDatabase` class, along with 
             _itSystemsDatabase = itSystemsDatabase;
         }
 ```
-
-
+<br>
+<br>
 The following phase was the ViewModel. The `ITSystemViewModel` class accesses services by accepting the `IITSystemServices` interface through its constructor. The ViewModel instantiates an `ObservableCollection` to display IT Systems, which is bound to the XAML of the page. The class also initializes the database, loads IT systems data, and populates the `ObservableCollection` with it.
 
 Lastly, an instance of `ITSystemViewModel` is passed to the view represented by `ITSystemPage` when it's created. This is done by passing the `ViewModel` as a parameter via the constructor and assigning it to the private field. The `BindingContext` of the `ITSystemPage` is then set to this instance of `ITSystemViewModel`, thereby connecting the ViewModel to the View. The class contains only one method that is called when the page is about to appear, which triggers the initialization of the ViewModel.
@@ -103,6 +103,8 @@ Lastly, an instance of `ITSystemViewModel` is passed to the view represented by 
             ITSystems = new ObservableCollection<ITSystemModel>();
         }
 ```
+<br>
+<br>
 
 In the end, I registered services with the dependency injection container in the MauiProgram file.
 
@@ -157,6 +159,8 @@ The `GetAllITSystems_ReturnsCorrectData` test checks if the `ITSystemServices` c
     }
 }
 ```
+<br>
+<br>
 
 The `LoadITSystems_ReturnObservableCollection` test makes sure that the `ITSystemViewModel` loads IT Systems into its collection properly by using a mock service. It verifies that the ViewModel’s collection has the correct number of loaded items.
 
@@ -187,9 +191,11 @@ The `LoadITSystems_ReturnObservableCollection` test makes sure that the `ITSyste
             }
         }
 ```
-
+<br>
+<br>
 Both tests work without the need for a real database or service, which means they are more reliable and not influenced by outside issues like database problems.
-
+<br>
+<br>
 <figure>
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/44.jpg?raw=true" alt="Tests">
   <figcaption><b>Fig.2 - Tests - All tests passed</b></figcaption>
@@ -211,7 +217,8 @@ This review process, while not directly related to the initial feedback, prompte
 While I was setting up my Doxygen output, another team member merged his feature branch, which included the Doxyfile. Therefore, I decided not to push my Doxyfile and output to the shared repository to avoid conflicts.
 
 After my feature branch was approved and merged into the Development branch, aligning with our team's workflow, I moved my issue card to Completed on the Kanban board and closed [the issue](https://github.com/timh1975/UNDAC-Project/issues/15).
-
+<br>
+<br>
 <figure>
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/48.jpg?raw=true" alt="Code Review">
   <figcaption><b>Fig.3 - Screenshot from GitHub showcasing review of my code and generated Doxygen documentation</b></figcaption>
@@ -227,12 +234,16 @@ In the review, I left two comments: one general comment describing the good over
 I advised my colleague to further separate the ViewModel class by introducing a service class and moving the data loading method logic there. I also suggested implementing an interface for the service class and injecting it into the ViewModel to avoid direct model instantiation. This solution could help achieve better separation of the presentation layer from the business layer and facilitate easier testing by allowing both the service class and ViewModel to be tested using mocked interfaces.
 
 I think my suggestion could help my team member implement the MVVM pattern more effectively, which he was attempting to do. Therefore, since his original code was well-structured and he wanted to merge it into his test feature, I approved the PR and the branch was merged.
+<br>
+<br>
 
 <figure>
   <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/46.jpg?raw=true" alt="Code Review">
   <figcaption><b>Fig.4 - Screenshot from GitHub showing a general comment as well as a specific comment on a class during a code review</b></figcaption>
 </figure>
 
+<br>
+<br>
 
 ## Reflection
 
