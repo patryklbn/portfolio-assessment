@@ -187,8 +187,8 @@ The `LoadITSystems_ReturnObservableCollection` test makes sure that the `ITSyste
 Both tests work without the need for a real database or service, which means they are more reliable and not influenced by outside issues like database problems.
 
 <figure>
-  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/44.jpg?raw=true" alt="Feature">
-  <figcaption><b>Fig.2 - UNDAC App - Implemented feature</b></figcaption>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/44.jpg?raw=true" alt="Tests">
+  <figcaption><b>Fig.2 - Tests - All tests passed</b></figcaption>
 </figure>
 
 
@@ -206,17 +206,17 @@ This review process, while not directly related to the initial feedback, prompte
 
 While I was setting up my Doxygen output, another team member merged his feature branch, which included the Doxyfile. Therefore, I decided not to push my Doxyfile and output to the shared repository to avoid conflicts.
 
-After my feature branch was approved and merged into the Development branch, aligning with our team's workflow, I moved my issue card to Completed on the Kanban board and closed the issue.
+After my feature branch was approved and merged into the Development branch, aligning with our team's workflow, I moved my issue card to Completed on the Kanban board and closed [the issue](https://github.com/timh1975/UNDAC-Project/issues/15).
 
 <figure>
-  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/44.jpg?raw=true" alt="Feature">
-  <figcaption><b>Fig.1 - UNDAC App - Implemented feature</b></figcaption>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/48.jpg?raw=true" alt="Code Review">
+  <figcaption><b>Fig.3 - Screenshot from GitHub showcasing review of my code and generated Doxygen documentation</b></figcaption>
 </figure>
 
 
 ### Reviewing Someone Else's Code
 
-This week, a team member asked me to review a specific class implementing ViewModel. He was still working on the issue and wanted to merge his PR into his test branch.
+This week, a team member asked me to review a specific class implementing ViewModel. He was still working on the issue and wanted to merge his [pull request](https://github.com/timh1975/UNDAC-Project/pull/103) into his test branch.
 
 In review i left two comments, one general comment discribing good overall structure of the code, and good implementation od data binding and advise to consider to add more doxygen comments. In second comment Ive provided feedback to the specific class which i was asked to review. 
 
@@ -225,9 +225,10 @@ I advised my colleague to further separate the ViewModel class by introducing a 
 I think my suggestion could help my team member implement the MVVM pattern more effectively, which he was attempting to do. Therefore, since his original code was well-structured and he wanted to merge it into his test feature, I approved the PR and the branch was merged.
 
 <figure>
-  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/46.jpg?raw=true" alt="Feature">
-  <figcaption><b>Fig.1 - UNDAC App - Implemented feature</b></figcaption>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/46.jpg?raw=true" alt="Code Review">
+  <figcaption><b>Fig.4 - Screenshot from GitHub showing a general comment as well as a specific comment on a class during a code review</b></figcaption>
 </figure>
+
 
 ## Reflections
 
