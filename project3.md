@@ -1,4 +1,4 @@
-# Project 3
+# Project work 3
 
 In this portfolio entry, I'll share the progress and insights from the third week of the team project. I'll provide examples of the code I wrote and explain the testing process. I'll also reflect on my experience reviewing both my own code and a teammate's. Lastly, I will offer reflections to illustrate how I'm continuing to grow as a software engineer
 
