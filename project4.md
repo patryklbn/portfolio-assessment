@@ -3,10 +3,10 @@
 In this portfolio entry, I'll share the progress and insights from the fourth week of the team project. This week, I continued my work on the group project, focusing on further developing features and enhancing the overall functionality. I'll provide examples of the code I've contributed this week, delve into the testing process I undertook, and reflect on my experiences in code review sessions, both reviewing my work and that of my teammates. Finally, I'll discuss my ongoing development as a software engineer, highlighting new challenges I faced and the strategies I employed to overcome them
 
 ###### Contents
-*  [Issue](https://github.com/patryklbn/portfolio-assessment/blob/master/project3.md#issue)
-*  [Testing](https://github.com/patryklbn/portfolio-assessment/blob/master/project3.md#testing)
-*  [Code Reviews](https://github.com/patryklbn/portfolio-assessment/blob/master/project3.md#code-reviews)
-*  [Reflection](https://github.com/patryklbn/portfolio-assessment/blob/master/project3.md#reflection)
+*  [Issue](https://github.com/patryklbn/portfolio-assessment/blob/master/project4.md#issue)
+*  [Testing](https://github.com/patryklbn/portfolio-assessment/blob/master/project4.md#testing)
+*  [Code Reviews](https://github.com/patryklbn/portfolio-assessment/blob/master/project4.md#code-reviews)
+*  [Reflection](https://github.com/patryklbn/portfolio-assessment/blob/master/project4.md#reflection)
 
 ## Issue 
 
