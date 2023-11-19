@@ -37,8 +37,6 @@ public class ITSystemContext : DbContext
 ```
 <br>
 <br>
-<br>
-<br>
 
 **Refactoring the Service Class**: I refactored the service class to use the `ITSystemContext` class, which abstracts database operations through an interface. I added two additional CRUD methods, `AddITSystem` and `UpdateITSystem`, and included them in the interface's contract.
 
@@ -83,10 +81,12 @@ Interface:
 Lastly, I've change register in MauiProgram class to use DbContext
 
 By injecting the `ITSystemContext` into `ITSystemServices`, I adhered to the **Dependency Injection** principle, enhancing the testability of the code. The code also adheres to the **KISS** principle keeping the code simple, It features **meaningful names**, and is documented with Doxygen comments.
+<br>
 
 **Refactoring the Model and ViewModel**: To enhance the separation in my MVVM pattern, I decided to move `INotifyPropertyChanged` interface, which notifies clients that a property value has changed, from the `ITSystemModel` class to a new `ITSystemViewModelItem` class nested within `ITSystemViewModel`. I decided to nest these classes, rather than creating a separate class, for better clarity and organisation.
 
 New `ITSystemViewModelItem` class:
+
 ```
     /// <summary>
     /// ViewModel item for an IT system
@@ -139,6 +139,7 @@ New `ITSystemViewModelItem` class:
         }
     }
 ```
+<br>
 
 By moving `INotifyPropertyChanged`, I separated the UI logic from the business layer in my MVVM pattern. By implementing a new class nested within my ViewModel, I adhered to the Single Responsibility Principle, making each class responsible for a single functionality.
 
@@ -187,8 +188,11 @@ The `GetAllITSystems_ReturnsCorrectData` test checks if the `ITSystemServices` c
             }
         }
 ```
+<br>
+<br>
 
 The `GetITSystemById_NonExistingId` test checks if the `ITSystemServices` class correctly returns null when an IT System is queried by a non existing ID. This test ensure the robustness of the service class in handling edge cases.
+<br>
 
 ```
         [Fact]
@@ -213,6 +217,8 @@ The `GetITSystemById_NonExistingId` test checks if the `ITSystemServices` class 
             }
         }
 ```
+<br>
+<br>
 
 The tests for my ViewModel remained the same as last week, as they are separated from the data layer and use `IITSystemServices` to mock the service class.
 
@@ -240,7 +246,7 @@ The tests for my ViewModel remained the same as last week, as they are separated
             }
         }
 ```
-
+<br>
 After all my tests passed, I committed my changes and performed a sanity check to ensure that there were no items in my code, such as 'ToDo' comments, that shouldn't be pushed to the remote repository. Then, I pushed my branch and opened a pull request.
 
 <br>
