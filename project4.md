@@ -14,7 +14,7 @@ This week, I chose to enhance an existing feature instead of starting a new one.
 
 Alongside the database upgrade, I planned to enhance the separation of layers in the MVVM pattern, focusing on clarity and maintainability.
 
-To kick off this task, I created a [new issue](https://github.com/timh1975/UNDAC-Project/issues/112) in our team's GitHub repository, clearly naming and describing the intended enhancements. I then moved this issue to the "In Progress" column on our [Kanban board](https://github.com/users/timh1975/projects/2/views/1), marking the start of my work on these improvements.
+Firstly, I created a [new issue](https://github.com/timh1975/UNDAC-Project/issues/112) in our team's GitHub repository, clearly naming and describing the intended enhancements. I then moved this issue to the "In Progress" column on our [Kanban board](https://github.com/users/timh1975/projects/2/views/1), marking the start of my work on these improvements.
 
 ### Implementation
 
