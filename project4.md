@@ -12,7 +12,7 @@ In this portfolio entry, I'll share the progress and insights from the fourth we
 
 This week, I chose to enhance an existing feature instead of starting a new one. My goal was to upgrade the [IT Systems](https://github.com/timh1975/UNDAC-Project/issues/15) feature by replacing the SQLite database with Microsoft Entity Framework. This change aimed at improving data management and further refining the application's architecture.
 
-Alongside the database upgrade, I planned to enhance the separation of layers in our MVVM pattern, focusing on clarity and maintainability.
+Alongside the database upgrade, I planned to enhance the separation of layers in the MVVM pattern, focusing on clarity and maintainability.
 
 To kick off this task, I created a [new issue](https://github.com/timh1975/UNDAC-Project/issues/112) in our team's GitHub repository, clearly naming and describing the intended enhancements. I then moved this issue to the "In Progress" column on our [Kanban board](https://github.com/users/timh1975/projects/2/views/1), marking the start of my work on these improvements.
 
