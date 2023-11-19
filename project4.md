@@ -142,6 +142,7 @@ New `ITSystemViewModelItem` class:
 
 By moving `INotifyPropertyChanged`, I separated the UI logic from the business layer in my MVVM pattern. By implementing a new class nested within my ViewModel, I adhered to the Single Responsibility Principle, making each class responsible for a single functionality.
 
+My old database class, along with its settings, was deleted. I've checked my code using static analysis for any hints from the IDE and then performed dynamic analysis. I've run the code to check if my feature behaves correctly.
 
 
 ### Testing
@@ -236,11 +237,63 @@ The tests for my ViewModel remained the same as last week, as they are separated
         }
 ```
 
+After all my tests passed, I committed my changes and performed a sanity check to ensure that there were no items in my code, such as 'ToDo' comments, that shouldn't be pushed to the remote repository. Then, I pushed my branch and opened a pull request.
+
 ## Code Reviews
 
 ### Reviewing My Code 
 
+Feedback on my [pull request](https://github.com/timh1975/UNDAC-Project/pull/115) was provided in the form of the comment and suggested changes. My team member first provided general feedback that my original implementation was good and aligned with the MVVM pattern. He suggested refactoring my newly introduced `ViewModelItem` class to enhance the separation between my ViewModel and Model. The adjustment suggested implementing a SetProperty method to simplify property setters, reduce code duplication, and make the ViewModel easier to maintain and extend. I must admit that I didn't fully understand the proposed changes and had to spend some time investigating. After investigation, I gained a better understanding of implementing the SetProperty method to reduce code duplication by setting property logic in the SetProperty method rather than in each property. 
+
+Since the suggested change indicates only to my Name property, I decided not to commit this change and instead implemented it locally along with the IsAvailable property. 
+
+My refactored properties:
+```
+        public string Name
+        {
+            get => _name;
+            set
+            {
+                if (SetProperty(ref _name, value, nameof(Name)))
+                {
+                    _itSystemModel.Name = value; 
+                }
+            }
+        }
+
+        public bool IsAvailable
+        {
+            get => _isAvailable;
+            set
+            {
+                if (SetProperty(ref _isAvailable, value, nameof(IsAvailable)))
+                {
+                    _itSystemModel.IsAvailable = value; 
+                    OnPropertyChanged(nameof(AvailabilityText));
+                }
+            }
+        }
+
+        public string AvailabilityText => IsAvailable ? "Available" : "Unavailable";
+
+        protected bool SetProperty<T>(ref T field, T value, string propertyName)
+        {
+            if (EqualityComparer<T>.Default.Equals(field, value)) return false;
+            field = value;
+            OnPropertyChanged(propertyName);
+            return true;
+        }
+```
+
+After verifying that everything was working, I committed the changes and pushed my feature branch. Next, I responded to the feedback with a comment that the proposed changes were valid and that I had applied and committed them.
+
 ### Reviewing Someone Else's Code
+
+I've provided feedback on my team member's [pull request](https://github.com/timh1975/UNDAC-Project/pull/117), both as a general comment and in a code comment. First, I gave overall feedback, noting the well-structured code and effective use of Doxygen comments. Since I am reviewing this team member's code for the second time, I noticed an improvement from their previous pull request, particularly their start in using Doxygen comments, which I believe is a good development in their workflow.
+
+I also suggested further validation of properties to enhance the code's reliability and added in-code comments about redundant comments.
+
+Since the code changes do not seem to have a negative impact on the codebase, I've approved the pull request.
 
 ## Reflection
 
@@ -248,7 +301,7 @@ The tests for my ViewModel remained the same as last week, as they are separated
 
 This week, my major improvement involved upgrading my existing feature from a relational SQLite database to an Object-Relational Mapping (ORM) framework, specifically Entity Framework Core. This transition is an enhancement in good practice, as it leverages the robustness of ORM for more efficient data handling and maintenance. By implementing Entity Framework Core, I've improved the data access layer, improving code readability and maintainability, and also allowed to test service class by imitating real database using `UseInMemoryDatabase` method.
 
-My next enhancement focused on further segregating UI logic from the business layer in MVVM pattern implementation. By transitioning the z`NotifyPropertyChanged` implementation from the Model to the ViewModel, I've achieved a more complete separation of UI components. This is important for maintaining the integrity of the code, as it ensures that UI elements remain isolated from the business logic, leading to more reliable and maintainable code.
+My next enhancement focused on further segregating UI logic from the business layer in MVVM pattern implementation. By transitioning the `NotifyPropertyChanged` implementation from the Model to the ViewModel, I've achieved a more complete separation of UI components. This is important for maintaining the integrity of the code, as it ensures that UI elements remain isolated from the business logic, leading to more reliable and maintainable code.
 
 Since a team member recently resolved conflicts and merged all previous feature branches into the Development branch, I started my work this week by creating a new branch and fetching the latest updates from the origin. I merged my branch with the updated Development branch. I believe it's important to regularly sync my local codebase with the Development branch to stay up-to-date with the team's progress and avoid potential conflicts in the future. This practice has been a valuable improvement to my personal routine.
 
@@ -264,3 +317,8 @@ Currently, each team member sets up a new local database for individual features
 
 ### Conclusion
 
+The past week of working on our group project brought further improvements to our team's workflow and the quality of my code. All previously approved feature branches were merged into the Development branch, thanks to a team member who handled the conflicts. Our application, with its additional features, is working smoothly without crashes, which is a positive sign. Moreover, every pull request opened this week received a review. We also enhanced our workflow by adding a step to delete branches after merging, keeping the repository more organized.
+
+For me, this week was quite experimental, as I aimed to enhance my feature using the EF Core framework. This improvment provided me with a better understanding of EF Core, its differences from SQLite, and the potential difficulties in its implementation. Additionally, I improved the separation of layers in my work to better align with the MVVM pattern. The feedback received during the PR review of my code offered excellent suggestions on how to achieve even better results.
+
+I believe there is still room for improvement in our team workflow and in my ability to write quality code. However, I feel we are on the right track, and each week I gain a deeper understanding of good software practices and how to maintain both personal and team workflows.
