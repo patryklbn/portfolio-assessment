@@ -144,6 +144,10 @@ By moving `INotifyPropertyChanged`, I separated the UI logic from the business l
 
 My old database class, along with its settings, was deleted. I've checked my code using static analysis for any hints from the IDE and then performed dynamic analysis. I've run the code to check if my feature behaves correctly.
 
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/49.jpg?raw=true" alt="Feature">
+  <figcaption><b>Fig.1 - UNDAC App - Working feature after upgrading to EF Core framework</b></figcaption>
+</figure>
 
 ### Testing
 
@@ -239,6 +243,13 @@ The tests for my ViewModel remained the same as last week, as they are separated
 
 After all my tests passed, I committed my changes and performed a sanity check to ensure that there were no items in my code, such as 'ToDo' comments, that shouldn't be pushed to the remote repository. Then, I pushed my branch and opened a pull request.
 
+<br>
+<br>
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/50.jpg?raw=true" alt="Tests">
+  <figcaption><b>Fig.2 - Tests - All tests passed</b></figcaption>
+</figure>
+
 ## Code Reviews
 
 ### Reviewing My Code 
@@ -286,6 +297,12 @@ My refactored properties:
 ```
 
 After verifying that everything was working, I committed the changes and pushed my feature branch. Next, I responded to the feedback with a comment that the proposed changes were valid and that I had applied and committed them.
+<br>
+<br>
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/56.jpg?raw=true" alt="Code Review">
+  <figcaption><b>Fig.3 - Screenshot from GitHub showcasing review of my code</b></figcaption>
+</figure>
 
 ### Reviewing Someone Else's Code
 
@@ -294,6 +311,16 @@ I've provided feedback on my team member's [pull request](https://github.com/tim
 I also suggested further validation of properties to enhance the code's reliability and added in-code comments about redundant comments.
 
 Since the code changes do not seem to have a negative impact on the codebase, I've approved the pull request.
+<br>
+<br>
+
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/53.jpg?raw=true" alt="Code Review">
+  <figcaption><b>Fig.4 - Screenshot from GitHub showing a general comment as well as a specific in code comment during a code review</b></figcaption>
+</figure>
+
+<br>
+<br>
 
 ## Reflection
 
