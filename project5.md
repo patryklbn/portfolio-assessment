@@ -10,9 +10,9 @@ This is the final portfolio entry of my group project. I will present the good s
 
 ## Issue
 
-This week, I've assign myself to the new task. Following my personal workflow I started from picking a task from Issues on GitHub, assign it to myself and moved card on Kanban board to appropiete column from "ToDo" to "In Progress". My task for this week:
+This week, I've assign myself to the new task. Following my personal workflow I started from picking a [task from Issues](https://github.com/timh1975/UNDAC-Project/issues/73) on GitHub, assign it to myself and moved card on Kanban board to appropiete column from "ToDo" to "In Progress". My task for this week:
 
-`As an UNDAC Analyst, I want to view the status of current and completed operations so that I can evaluate the effectiveness of the mission`
+**As an UNDAC Analyst, I want to view the status of current and completed operations so that I can evaluate the effectiveness of the mission**
 
 This week I focus on enhancing the UNDAC App by incorporating a feature tailored for the UNDAC Analyst. This feature is designed to provide a comprehensive overview of all operational statuses, encompassing both ongoing and completed missions. The goal is to empower the Analyst with the necessary tools to effectively assess the impact and efficiency of each mission. This new functionality will offer a detailed listing of operations, complete with their respective statuses.
 
@@ -127,25 +127,27 @@ Demonstrating my good software engineering practices, I will discuss my reposito
 <br>
 <br>
 
-Code demonstrates several good software practices, including principles of SOLID and clean code:
+Code demonstrates several good software practices, including principles of SOLID and clean code.
 
-**Single Responsibility Principle (SOLID):** Each method in the OperationStatusRepository class has a single responsibility. For instance, GetAllAsync retrieves all operation statuses, while AddNewAsync adds a new status. This separation ensures that each method performs one task.
+**SOLID Principles:**
 
-**Open/Closed Principle (SOLID):** The use of an interface `IOperationStatusRepository` for the repository class allows the class to be extended without modifying it. New functionalities can be added by creating new implementations of the interface without changing the existing implementation.
+> Single Responsibility Principle (SOLID): Each method in the OperationStatusRepository class has a single responsibility. For instance, GetAllAsync retrieves all operation statuses, while AddNewAsync adds a new status. This separation ensures that each method performs one task.
 
-**Dependency Inversion Principle (SOLID):** The repository class depends on abstractions `ITSystemContext` rather than concrete implementations. This reduces coupling between the data layer and the business logic.
+> Open/Closed Principle (SOLID): The use of an interface `IOperationStatusRepository` for the repository class allows the class to be extended without modifying it. New functionalities can be added by creating new implementations of the interface without changing the existing implementation.
+
+> Dependency Inversion Principle (SOLID): The repository class depends on abstractions `ITSystemContext` rather than concrete implementations. This reduces coupling between the data layer and the business logic.
 <br>
 <br>
 
-Clean Code Principles:
+**Clean Code Principles:**
 
-**Code Readability:** The method names like GetAllAsync, AddNewAsync are self-explanatory, describing their functionality which makes the code more readable.
+- Code Readability: The method names like GetAllAsync, AddNewAsync are self-explanatory, describing their functionality which makes the code more readable.
 
-**Use of Doxygen Comments:** The use of Doxygen comments for methods and classes enhances understanding and helps in maintaining the code.
+- Use of Doxygen Comments: The use of Doxygen comments for methods and classes enhances understanding and helps in maintaining the code.
 
-**Error Handling:** The InitializeDatabaseAsync method includes error handling to catch exception, ensuring the program's stability.
+- Error Handling: The InitializeDatabaseAsync method includes error handling to catch exception, ensuring the program's stability.
 
-**Asynchronous Programming:** The use of async and await ensures that the database operations are performed asynchronously.
+- Asynchronous Programming: The use of async and await ensures that the database operations are performed asynchronously.
 
 
 By following these principles, code not only adheres to the SOLID principles but also enhances the readability and maintainability.
@@ -283,3 +285,20 @@ After all my tests passed, I committed my changes and performed a sanity check t
 ## Code Reviews
 
 ### Reviewing My Code 
+
+Feedback on my [pull request](https://github.com/timh1975/UNDAC-Project/pull/125) was provided in the comments, along with a screenshot indicating the requested changes. A team member pointed out that the code is clean, readable, and follows software principles. My colleague also noticed my improvement compared to last week, highlighting minor code formatting issues and the lack of Doxygen comments. I made the requested changes; I fixed the formatting and added Doxygen comments, then committed and pushed my feature branch.
+
+Then, I responded in the comments that the changes were made, resolved the conversation, and merged my branch with the Development branch. Following the newly added step in our workflow, I deleted my feature branch after merging.
+
+I think the code review provided this week by my team member was professional, tactful, and maintained a friendly and encouraging tone. The requested changes were well-spotted and made sense.
+
+### Reviewing Someone Else's Code
+
+I reviewed the [pull request](https://github.com/timh1975/UNDAC-Project/pull/124) of the same person who reviewed mine. My feedback was provided in a general comment and in code comments, along with an example of the suggested change. I mentioned the good structure of the code, adherence to good coding practices, and the use of Doxygen comments. One suggestion I made was to add exception handling to the method initializing the database for better robustness and early detection of potential database issues. In the code comment, I provided an example of how these changes could be implemented.
+
+I tried to maintain a professional but friendly tone in my feedback. I first highlighted the positive aspects of the pull request and then suggested improvements for system stability.
+
+Since this pull request did not have a negative impact on the codebase, I approved it. Afterward, I noticed that my team member committed the suggested changes and merged their branch.
+
+## Reflections
+
