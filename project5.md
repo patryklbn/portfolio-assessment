@@ -130,12 +130,11 @@ Demonstrating my good software engineering practices, I will discuss my reposito
 Code demonstrates several good software practices, including principles of SOLID and clean code.
 
 **SOLID Principles:**
+- Single Responsibility Principle (SOLID): Each method in the OperationStatusRepository class has a single responsibility. For instance, GetAllAsync retrieves all operation statuses, while AddNewAsync adds a new status. This separation ensures that each method performs one task.
 
-> Single Responsibility Principle (SOLID): Each method in the OperationStatusRepository class has a single responsibility. For instance, GetAllAsync retrieves all operation statuses, while AddNewAsync adds a new status. This separation ensures that each method performs one task.
+- Open/Closed Principle (SOLID): The use of an interface `IOperationStatusRepository` for the repository class allows the class to be extended without modifying it. New functionalities can be added by creating new implementations of the interface without changing the existing implementation.
 
-> Open/Closed Principle (SOLID): The use of an interface `IOperationStatusRepository` for the repository class allows the class to be extended without modifying it. New functionalities can be added by creating new implementations of the interface without changing the existing implementation.
-
-> Dependency Inversion Principle (SOLID): The repository class depends on abstractions `ITSystemContext` rather than concrete implementations. This reduces coupling between the data layer and the business logic.
+- Dependency Inversion Principle (SOLID): The repository class depends on abstractions `ITSystemContext` rather than concrete implementations. This reduces coupling between the data layer and the business logic.
 <br>
 <br>
 
