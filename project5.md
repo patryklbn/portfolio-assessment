@@ -301,3 +301,10 @@ Since this pull request did not have a negative impact on the codebase, I approv
 
 ## Reflections
 
+### Improvments
+
+A major improvement in my project was the implementation of the repository pattern, which effectively isolates the data layer from the rest of the application. In this pattern, the Repository class manages database operations and interacts with the database context, which is injected through its constructor. This encapsulation of data access logic in the repository abstracts it from other layers of the application.
+
+Furthermore, an interface defined in the repository class is injected into the service class. This service class then utilizes the repository to perform data operations, and its interface is in turn injected into the ViewModel. This layered approach ensures that each component works upon an abstraction rather than directly with concrete implementations. It adheres to the Single Responsibility Principle, as each layer is responsible for its distinct role.
+
+This implementation not only enhances the modularity of the code but also ensures that changes in lower-level modules, like the database access layer, do not affect the higher-level modules such as the ViewModel. Overall, this approach significantly contributes to making the code more reliable and easier to maintain.
