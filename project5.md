@@ -303,7 +303,7 @@ Since this pull request did not have a negative impact on the codebase, I approv
 
 ### Improvments
 
-A major improvement in my project was the implementation of the repository pattern, which effectively isolates the data layer from the rest of the application. In this pattern, the Repository class manages database operations and interacts with the database context, which is injected through its constructor. This encapsulation of data access logic in the repository abstracts it from other layers of the application.
+A major improvement in my work this week was the implementation of the repository pattern, which effectively isolates the data layer from the rest of the application. In this pattern, the Repository class manages database operations and interacts with the database context, which is injected through its constructor. This encapsulation of data access logic in the repository abstracts it from other layers of the application.
 
 Furthermore, an interface defined in the repository class is injected into the service class. This service class then utilizes the repository to perform data operations, and its interface is injected into the ViewModel. This separation ensures that each component works upon an abstraction rather than directly with concrete implementations. It adheres to the Single Responsibility Principle, as each layer is responsible for its distinct role.
 
@@ -311,9 +311,26 @@ This implementation not only enhances the modularity of the code but also ensure
 
 One of the improvements to the team's workflow, and mine personally, was changing the strategy regarding feature branches after the merge. This week, after addressing feedback in the code review and merging my feature branch into the team's agreed-upon development branch, I deleted my feature branch. I think this adjustment to our workflow is an improvement in keeping the repository more tidy and it follows the standard GitHub workflow.
 
-Another improvement I can see is in the quality of code reviews. Even though fewer people seem to be engaged in the code review process towards the end of the project, those who do collaborate provide feedback in a professional, yet friendly and encouraging manner. Team members share their ideas with examples of enhancements they mention in their reviews. The fact that some of us examine someone's code more closely to find examples that can be used in our own portfolios has pushed us to pay more attention to the quality of the code. This can result in improvement as software developers.
+Another improvement I can see is in the quality of code reviews. Even though fewer people seem to be engaged in the code review process towards the end of the project, those who do collaborate provide feedback in a professional, but friendly and encouraging manner. Team members share their ideas with examples of enhancements they mention in their reviews. The fact that some of us examine someone's code more closely to find examples that can be used in our own portfolios has pushed us to pay more attention to the quality of the code. This can result in improvement as software developers.
 
 ### Difficulties 
 
 When I tried to implement the DbSet for the OperationsStatus feature in the DbContext from the previous ITSystems feature, I encountered an issue with creating a table. An exception was thrown indicating that the database could not find a table for the new feature. To resolve this, I renamed the database file, but I understand that this was not a good approach since it required creating a new database schema instead of working on the previous one as I had originally planned. Over the last two weeks, I have been experimenting a bit with the database and EF Core, and this has led me to the conclusion that migration is necessary for correctly adding new tables to an existing database.
 
+### Further Possible Improvements
+
+There is room for further improvements in our team's workflow, and the project itself. We struggled a bit with merging our feature branches into the Development branch. I think some people were scared that they might break something, and one person in our team ended up dealing with the conflicts and merging the branches. Automating our workflow, perhaps using GitHub Actions, could be a solution. This would allow for automated builds after pushing to the remote repository, ensuring that changes wouldn't break the whole app. Additionally, automated tests could run to ensure the reliability of the code.
+
+Another area for improvement is our team coordination, specifically in task management. We should set clear goals, objectives, and priorities, identifying which tasks in our projects are more important than others. Applying a framework like Scrum could be beneficial for continuous feedback and making sure that everyone clearly knows what to do. Incorporating daily stand-ups as a part of Scrum could also help improve team communication.
+
+Our code review process could be improved by having a specific team member review our code. This could be a work buddy or a mentor, and we could assign that person in the pull request.
+
+Regarding the Doxyfile, setting a relative path rather than an absolute one, for example, `./src` if the Doxyfile is in the root directory, would allow us to generate local documentation of the whole project, including changes by others after fetching and merging from the origin.
+
+Regarding the project itself, I think the best approach would be to first set up a shared database and then have everyone work on it, adding new tables, or to create the entire database schema first and then work on it.
+
+### Conclusion
+
+Over the last five weeks, I've worked with my team on a project, and I think I've significantly grown as a Software Engineer. During the implementation stages, instead of focusing on tasks like improving the UI of my pages, I focused on the technical side. This included writing clean code, following good software practices, understanding and improving the architecture of my code, and implementing design patterns. I now understand how to isolate different components of my software and effectively test them.
+
+I have gained a better understanding of team workflow and my personal workflow as well. I now know which processes can be used to create quality software. The code review process was a great way to get familiar with this feedback mechanism, showing its importance and the difficulties that can arise in a software development team.
