@@ -150,6 +150,12 @@ Code demonstrates several good software practices, including principles of SOLID
 
 
 By following these principles, code not only adheres to the SOLID principles but also enhances the readability and maintainability.
+<br>
+<br>
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/57.jpg?raw=true" alt="Feature">
+  <figcaption><b>Fig.1 - UNDAC App - Implemented feature</b></figcaption>
+</figure>
 
 ### Testing
 
@@ -280,6 +286,12 @@ This test checks if the  `OperationStatusViewModel` correctly loads operation st
 <br>
 <br>
 After all my tests passed, I committed my changes and performed a sanity check to ensure that there were no items in my code, such as 'ToDo' comments, that shouldn't be pushed to the remote repository. Then, I pushed my branch and opened a pull request.
+<br>
+<br>
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/58.jpg?raw=true" alt="Tests">
+  <figcaption><b>Fig.2 - Tests - All tests passed</b></figcaption>
+</figure>
 
 ## Code Reviews
 
@@ -287,9 +299,25 @@ After all my tests passed, I committed my changes and performed a sanity check t
 
 Feedback on my [pull request](https://github.com/timh1975/UNDAC-Project/pull/125) was provided in the comments, along with a screenshot indicating the requested changes. A team member pointed out that the code is clean, readable, and follows software principles. My colleague also noticed my improvement compared to last week, highlighting minor code formatting issues and the lack of Doxygen comments. I made the requested changes; I fixed the formatting and added Doxygen comments, then committed and pushed my feature branch.
 
-Then, I responded in the comments that the changes were made, resolved the conversation, and merged my branch with the Development branch. Following the newly added step in our workflow, I deleted my feature branch after merging.
+Then, I responded in the comments that the changes were made, resolved the conversation, and merged my branch with the Development branch.
 
 I think the code review provided this week by my team member was professional, tactful, and maintained a friendly and encouraging tone. The requested changes were well-spotted and made sense.
+<br>
+<br>
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/59.jpg?raw=true" alt="Code Review">
+  <figcaption><b>Fig.3 - Screenshot from GitHub showcasing review of my code</b></figcaption>
+</figure>
+<br>
+<br>
+Following the newly added step in our workflow, I deleted my feature branch after merging.
+<br>
+<br>
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/61.jpg?raw=true" alt="Code Review">
+  <figcaption><b>Fig.4 - Screenshot from GitHub showcasing merging and deleting my feature branch</b></figcaption>
+</figure>
+
 
 ### Reviewing Someone Else's Code
 
@@ -298,6 +326,14 @@ I reviewed the [pull request](https://github.com/timh1975/UNDAC-Project/pull/124
 I tried to maintain a professional but friendly tone in my feedback. I first highlighted the positive aspects of the pull request and then suggested improvements for system stability.
 
 Since this pull request did not have a negative impact on the codebase, I approved it. Afterward, I noticed that my team member committed the suggested changes and merged their branch.
+<br>
+<br>
+
+<figure>
+  <img src="https://github.com/patryklbn/portfolio-assessment/blob/master/images/62.jpg?raw=true" alt="Code Review">
+  <figcaption><b>Fig.5 - Screenshot from GitHub showing a general comment as well as a specific comment on a class during a code review</b></figcaption>
+</figure>
+<br>
 
 ## Reflections
 
