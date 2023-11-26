@@ -14,7 +14,7 @@ This week, I've assign myself to the new task. Following my personal workflow I 
 
 **As an UNDAC Analyst, I want to view the status of current and completed operations so that I can evaluate the effectiveness of the mission**
 
-This week I focus on enhancing the UNDAC App by incorporating a feature tailored for the UNDAC Analyst. This feature is designed to provide a comprehensive overview of all operational statuses, encompassing both ongoing and completed missions. The goal is to empower the Analyst with the necessary tools to effectively assess the impact and efficiency of each mission. This new functionality will offer a detailed listing of operations, complete with their respective statuses.
+This week, I worked on improving the UNDAC App by adding a new feature for the UNDAC Analyst. This feature helps them see all the work that's being done and finished. The idea is to give the Analyst everything they need to understand how well each mission is doing. With this new part of the app, they can see a list of all the missions and what's happening with each one.
 
 ### Implementation
 
