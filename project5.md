@@ -323,7 +323,7 @@ There is room for further improvements in our team's workflow, and the project i
 
 Another area for improvement is our team coordination, specifically in task management. We should set clear goals, objectives, and priorities, identifying which tasks in our projects are more important than others. Applying a framework like Scrum could be beneficial for continuous feedback and making sure that everyone clearly knows what to do. Incorporating daily stand-ups as a part of Scrum could also help improve team communication.
 
-Our code review process could be improved by having a specific team member review our code. This could be a work buddy or a mentor, and we could assign that person in the pull request.
+Our code review process could be improved by having a specific team member review our code. This could be a work buddy or a mentor, and we could assign that person in the pull request. 
 
 Regarding the Doxyfile, setting a relative path rather than an absolute one, for example, `./src` if the Doxyfile is in the root directory, would allow us to generate local documentation of the whole project, including changes by others after fetching and merging from the origin.
 
